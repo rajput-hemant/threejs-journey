@@ -1,6 +1,6 @@
 <div align="center">
 
-# Animations
+# 03 - Basic Scene
 
 #### Course: [ThreeJS Journey][course] By Bruno Simon
 

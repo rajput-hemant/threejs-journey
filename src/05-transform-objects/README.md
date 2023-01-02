@@ -1,6 +1,6 @@
 <div align="center">
 
-# Animations
+# 03 - Transform Objects
 
 #### Course: [ThreeJS Journey][course] By Bruno Simon
 
