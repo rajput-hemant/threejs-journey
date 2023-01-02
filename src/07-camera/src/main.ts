@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 import "./style.css";
 
@@ -6,7 +7,7 @@ import "./style.css";
  * Base
  */
 // Canvas
-const canvas = document.querySelector("canvas.webgl")!;
+const canvas: HTMLElement = document.querySelector("canvas.webgl")!;
 
 // Sizes
 const sizes = {
@@ -46,6 +47,31 @@ const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.z = 3;
 camera.lookAt(mesh.position);
 scene.add(camera);
+
+const controls = new OrbitControls(camera, canvas);
+/**
+ * what is controls.target?
+ *
+ * it's the position of the camera
+ * so if we change the y position of the camera to X
+ * the camera will be X unit above the cube
+ *
+ * what controls.target.y = 1; does?
+ *
+ * it sets the y position of the camera to 1
+ * so the camera will be 1 units above the cube
+ * and we need to call the update method to update the camera
+ *
+ */
+// controls.target.y = 1;
+// controls.update();
+
+/**
+ * this will enable damping
+ * so the camera will move smoothly instead of moving instantly
+ * and we need to call the update method to update the camera on every frame hence in the tick function
+ */
+controls.enableDamping = true;
 
 /**
  * Cursor position
@@ -101,16 +127,19 @@ const tick = () => {
 	 * so we can move the camera up and down with the mouse
 	 * and we multiply the result by 3 to get a bigger movement
 	 */
-	camera.position.x = Math.sin(cursor.x * Math.PI * 2) * 3;
-	camera.position.z = Math.cos(cursor.x * Math.PI * 2) * 3;
-	camera.position.y = cursor.y * 3;
+	// camera.position.x = Math.sin(cursor.x * Math.PI * 2) * 3;
+	// camera.position.z = Math.cos(cursor.x * Math.PI * 2) * 3;
+	// camera.position.y = cursor.y * 3;
 	/**
 	 * why lookAt?
 	 *
 	 * because we want the camera to look at the center of the cube
 	 * so we need to pass the position of the cube to the lookAt method
 	 */
-	camera.lookAt(mesh.position);
+	// camera.lookAt(mesh.position);
+
+	// Update controls
+	controls.update();
 
 	// Render
 	renderer.render(scene, camera);
