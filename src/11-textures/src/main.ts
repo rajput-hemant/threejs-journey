@@ -37,18 +37,18 @@ const textureLoader = new THREE.TextureLoader(loadingManager);
  * 3. error: when the texture is not loaded
  * one textureLoader can load multiple textures
  */
-const colorTexture = textureLoader.load(
-	"/textures/door/color.jpg",
-	() => {
-		console.log("load");
-	},
-	() => {
-		console.log("progress");
-	},
-	() => {
-		console.log("error");
-	}
-);
+// const colorTexture = textureLoader.load(
+// 	"/textures/door/color.jpg",
+// 	() => {
+// 		console.log("load");
+// 	},
+// 	() => {
+// 		console.log("progress");
+// 	},
+// 	() => {
+// 		console.log("error");
+// 	}
+// );
 // const alphaTexture = textureLoader.load("/textures/door/alpha.jpg");
 // const heightTexture = textureLoader.load("/textures/door/height.jpg");
 // const normalTexture = textureLoader.load("/textures/door/normal.jpg");

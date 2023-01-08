@@ -60,27 +60,35 @@ window.addEventListener("dblclick", () => {
 	 * and the mozRequestFullscreen() method for firefox
 	 */
 
-	const fullscreenElement =
-		document.fullscreenElement ||
-		document.webkitFullscreenElement ||
-		document.mozFullScreenElement;
+	// const fullscreenElement =
+	// 	document.fullscreenElement ||
+	// 	document.webkitFullscreenElement ||
+	// 	document.mozFullScreenElement;
+
+	// if (!fullscreenElement) {
+	// 	if (canvas.requestFullscreen) {
+	// 		canvas.requestFullscreen();
+	// 	} else if (canvas.webkitRequestFullscreen) {
+	// 		canvas.webkitRequestFullscreen();
+	// 	} else if (canvas.mozRequestFullscreen) {
+	// 		canvas.mozRequestFullscreen();
+	// 	}
+	// } else {
+	// 	if (document.exitFullscreen) {
+	// 		document.exitFullscreen();
+	// 	} else if (document.webkitExitFullscreen) {
+	// 		document.webkitExitFullscreen();
+	// 	} else if (document.mozExitFullscreen) {
+	// 		document.mozExitFullscreen();
+	// 	}
+	// }
+
+	const fullscreenElement = document.fullscreenElement;
 
 	if (!fullscreenElement) {
-		if (canvas.requestFullscreen) {
-			canvas.requestFullscreen();
-		} else if (canvas.webkitRequestFullscreen) {
-			canvas.webkitRequestFullscreen();
-		} else if (canvas.mozRequestFullscreen) {
-			canvas.mozRequestFullscreen();
-		}
+		canvas.requestFullscreen();
 	} else {
-		if (document.exitFullscreen) {
-			document.exitFullscreen();
-		} else if (document.webkitExitFullscreen) {
-			document.webkitExitFullscreen();
-		} else if (document.mozExitFullscreen) {
-			document.mozExitFullscreen();
-		}
+		document.exitFullscreen();
 	}
 });
 
