@@ -58,6 +58,8 @@ const lectures: Lectures = {
 			index: "13",
 			href: "https://3d-text-threejs-journey.vercel.app",
 		},
+	],
+	"02": [
 		{
 			name: "Lights",
 			index: "15",
@@ -67,6 +69,11 @@ const lectures: Lectures = {
 			name: "Shadows",
 			index: "16",
 			href: "https://shadows-threejs-journey.vercel.app",
+		},
+		{
+			name: "Haunted House",
+			index: "17",
+			href: "https://haunted-house-threejs-journey.vercel.app",
 		},
 	],
 };
