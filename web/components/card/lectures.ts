@@ -80,6 +80,11 @@ const lectures: Lectures = {
 			index: "18",
 			href: "https://particles-threejs-journey.vercel.app",
 		},
+		{
+			name: "Galaxy Generator",
+			index: "19",
+			href: "https://galaxy-generator-threejs-journey.vercel.app",
+		},
 	],
 };
 
