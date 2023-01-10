@@ -73,7 +73,7 @@ const lectures: Lectures = {
 		{
 			name: "Haunted House",
 			index: "17",
-			href: "https://haunted-house-threejs-journey.vercel.app",
+			href: "https://3d-haunted-house-threejs-journey.vercel.app",
 		},
 		{
 			name: "Particles",
