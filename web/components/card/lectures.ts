@@ -85,6 +85,11 @@ const lectures: Lectures = {
 			index: "19",
 			href: "https://galaxy-generator-threejs-journey.vercel.app",
 		},
+		{
+			name: "Raycaster",
+			index: "20",
+			href: "https://raycaster-threejs-journey.vercel.app",
+		},
 	],
 };
 
