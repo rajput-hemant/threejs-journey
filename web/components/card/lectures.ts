@@ -90,6 +90,11 @@ const lectures: Lectures = {
 			index: "20",
 			href: "https://raycaster-threejs-journey.vercel.app",
 		},
+		{
+			name: "Scroll Based Animations",
+			index: "21",
+			href: "https://scroll-based-animations-threejs-journey.vercel.app",
+		},
 	],
 };
 
