@@ -96,6 +96,13 @@ const lectures: Lectures = {
 			href: "https://scroll-based-animations-threejs-journey.vercel.app",
 		},
 	],
+	"03": [
+		{
+			name: "Physics",
+			index: "22",
+			href: "https://physics-threejs-journey.vercel.app",
+		},
+	],
 };
 
 export default lectures;

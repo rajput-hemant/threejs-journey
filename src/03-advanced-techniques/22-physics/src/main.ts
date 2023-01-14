@@ -8,7 +8,11 @@ import CANNON, { Vec3 } from "cannon";
  * Debug
  */
 const gui = new dat.GUI();
-const debugObject = { createSphere: () => {}, createBox: () => {} };
+const debugObject = {
+	createSphere: () => {},
+	createBox: () => {},
+	reset: () => {},
+};
 
 /**
  * Base
@@ -20,9 +24,28 @@ const canvas: HTMLElement = document.querySelector("canvas.webgl")!;
 const scene = new THREE.Scene();
 
 /**
+ * Sounds
+ */
+const sound = new Audio("/sounds/hit.mp3");
+
+const playSound = (collision: any) => {
+	/**
+	 * this is the velocity of the object that hit the other object
+	 * we can use this to determine how hard the object hit the other object
+	 */
+	const impactStrength = collision.contact.getImpactVelocityAlongNormal();
+
+	if (impactStrength > 1.5) {
+		sound.volume = Math.random();
+		sound.currentTime = 0;
+		sound.play();
+	}
+};
+
+/**
  * Textures
  */
-const textureLoader = new THREE.TextureLoader();
+// const textureLoader = new THREE.TextureLoader();
 const cubeTextureLoader = new THREE.CubeTextureLoader();
 
 const environmentMapTexture = cubeTextureLoader.load([
@@ -39,6 +62,16 @@ const environmentMapTexture = cubeTextureLoader.load([
  */
 // World
 const world = new CANNON.World();
+/**
+ * broadphase: the algorithm used to detect collisions between objects
+ * by default it checks all the objects in the world against each other, which is very inefficient
+ * SAPBroadphase is a good alternative, it checks objects against each other only if they are close to each other
+ */
+world.broadphase = new CANNON.SAPBroadphase(world);
+/**
+ * allowSleep: if true, bodies that are at rest will fall asleep and won't be checked for collisions until they move again
+ */
+world.allowSleep = true;
 world.gravity.set(0, -9.82, 0);
 
 // Materials
@@ -117,7 +150,7 @@ world.addBody(floorBody);
  * Floor
  */
 const floor = new THREE.Mesh(
-	new THREE.PlaneGeometry(10, 10),
+	new THREE.PlaneGeometry(500, 500),
 	new THREE.MeshStandardMaterial({
 		color: "#777777",
 		metalness: 0.3,
@@ -177,7 +210,7 @@ const camera = new THREE.PerspectiveCamera(
 	75,
 	sizes.width / sizes.height,
 	0.1,
-	100
+	1000
 );
 camera.position.set(-3, 3, 3);
 scene.add(camera);
@@ -232,6 +265,10 @@ const createSphere = (radius: number, position: THREE.Vector3) => {
 		material: defaultMaterial,
 	});
 	body.position.copy(position as unknown as CANNON.Vec3);
+	/**
+	 * This will play a sound when the box collides with the other objects
+	 */
+	body.addEventListener("collide", playSound);
 	world.addBody(body);
 
 	// Save in the updatable objects array
@@ -249,7 +286,6 @@ debugObject.createSphere = () => {
 		new THREE.Vector3(Math.random() - 0.5 * 3, 3, Math.random() - 0.5 * 3)
 	);
 };
-gui.add(debugObject, "createSphere").name("Click to Create Sphere");
 
 // Box
 const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
@@ -291,6 +327,10 @@ const createBox = (
 		material: defaultMaterial,
 	});
 	body.position.copy(position as unknown as CANNON.Vec3);
+	/**
+	 * This will play a sound when the box collides with the other objects
+	 */
+	body.addEventListener("collide", playSound);
 	world.addBody(body);
 
 	// Save in the updatable objects array
@@ -310,8 +350,22 @@ debugObject.createBox = () => {
 		new THREE.Vector3(Math.random() - 0.5 * 3, 3, Math.random() - 0.5 * 3)
 	);
 };
-gui.add(debugObject, "createBox").name("Click to Create Box");
 
+debugObject.reset = () => {
+	for (const object of objectToUpdate) {
+		object.body.removeEventListener("collide", playSound);
+
+		// remove body from physical world
+		world.remove(object.body);
+
+		// remove mesh from scene
+		scene.remove(object.mesh);
+	}
+};
+
+gui.add(debugObject, "createSphere").name("Click to Create Sphere");
+gui.add(debugObject, "createBox").name("Click to Create Box");
+gui.add(debugObject, "reset").name("Reset");
 /**
  * Animate
  */
