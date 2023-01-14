@@ -2,7 +2,7 @@ import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
-import CANNON from "cannon";
+import CANNON, { Vec3 } from "cannon";
 
 /**
  * Debug
@@ -251,6 +251,67 @@ debugObject.createSphere = () => {
 };
 gui.add(debugObject, "createSphere").name("Click to Create Sphere");
 
+// Box
+const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
+const boxMaterial = new THREE.MeshStandardMaterial({
+	metalness: 0.3,
+	roughness: 0.4,
+	envMap: environmentMapTexture,
+});
+
+/**
+ * This will create a Three.js Box along with a Cannon.js physics Box
+ * @param width width of the box
+ * @param height height of the box
+ * @param depth depth of the box
+ * @param position position of the box
+ *
+ */
+const createBox = (
+	width: number,
+	height: number,
+	depth: number,
+	position: THREE.Vector3
+) => {
+	// Three.js mesh
+	const mesh = new THREE.Mesh(boxGeometry, boxMaterial);
+	mesh.scale.set(width, height, depth);
+	mesh.castShadow = true;
+	mesh.position.copy(position);
+	scene.add(mesh);
+
+	// Cannon.js body
+	const shape = new CANNON.Box(
+		new Vec3(width * 0.5, height * 0.5, depth * 0.5)
+	);
+	const body = new CANNON.Body({
+		mass: 1,
+		shape,
+		position: new CANNON.Vec3(0, 3, 0),
+		material: defaultMaterial,
+	});
+	body.position.copy(position as unknown as CANNON.Vec3);
+	world.addBody(body);
+
+	// Save in the updatable objects array
+	objectToUpdate.push({
+		mesh,
+		body,
+	});
+};
+
+createBox(1, 1, 1, new THREE.Vector3(0, 3, 0));
+
+debugObject.createBox = () => {
+	createBox(
+		Math.random(),
+		Math.random(),
+		Math.random(),
+		new THREE.Vector3(Math.random() - 0.5 * 3, 3, Math.random() - 0.5 * 3)
+	);
+};
+gui.add(debugObject, "createBox").name("Click to Create Box");
+
 /**
  * Animate
  */
@@ -277,6 +338,8 @@ const tick = () => {
 
 	for (const obj of objectToUpdate) {
 		obj.mesh.position.copy(obj.body.position as unknown as THREE.Vector3);
+
+		// this is used to update the rotation of the object
 		obj.mesh.quaternion.copy(
 			obj.body.quaternion as unknown as THREE.Quaternion
 		);
