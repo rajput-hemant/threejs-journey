@@ -3,12 +3,12 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
 import CANNON from "cannon";
-import { Vector3 } from "three";
 
 /**
  * Debug
  */
 const gui = new dat.GUI();
+const debugObject = { createSphere: () => {}, createBox: () => {} };
 
 /**
  * Base
@@ -71,19 +71,19 @@ world.addContactMaterial(defaultContactMaterial);
 world.defaultContactMaterial = defaultContactMaterial;
 
 // Sphere body
-const sphereShape = new CANNON.Sphere(0.5);
-const sphereBody = new CANNON.Body({
-	mass: 1,
-	shape: sphereShape,
-	position: new CANNON.Vec3(0, 3, 0),
-	// material: plasticMaterial,
-	// material: defaultMaterial,
-});
-sphereBody.applyLocalForce(
-	new CANNON.Vec3(150, 0, 0), // force
-	new CANNON.Vec3(0, 0, 0) // local position
-);
-world.addBody(sphereBody);
+// const sphereShape = new CANNON.Sphere(0.5);
+// const sphereBody = new CANNON.Body({
+// 	mass: 1,
+// 	shape: sphereShape,
+// 	position: new CANNON.Vec3(0, 3, 0),
+// 	// material: plasticMaterial,
+// 	// material: defaultMaterial,
+// });
+// sphereBody.applyLocalForce(
+// 	new CANNON.Vec3(150, 0, 0), // force
+// 	new CANNON.Vec3(0, 0, 0) // local position
+// );
+// world.addBody(sphereBody);
 
 // Floor
 const floorShape = new CANNON.Plane();
@@ -93,24 +93,25 @@ const floorBody = new CANNON.Body({
 	// material: concreteMaterial,
 	// material: defaultMaterial,
 });
+// Rotate the floor 90 degrees to make it horizontal
 floorBody.quaternion.setFromAxisAngle(new CANNON.Vec3(-1, 0, 0), Math.PI * 0.5);
 world.addBody(floorBody);
 
 /**
  * Test sphere
  */
-const sphere = new THREE.Mesh(
-	new THREE.SphereGeometry(0.5, 32, 32),
-	new THREE.MeshStandardMaterial({
-		metalness: 0.3,
-		roughness: 0.4,
-		envMap: environmentMapTexture,
-		envMapIntensity: 0.5,
-	})
-);
-sphere.castShadow = true;
-sphere.position.y = 0.5;
-scene.add(sphere);
+// const sphere = new THREE.Mesh(
+// 	new THREE.SphereGeometry(0.5, 32, 32),
+// 	new THREE.MeshStandardMaterial({
+// 		metalness: 0.3,
+// 		roughness: 0.4,
+// 		envMap: environmentMapTexture,
+// 		envMapIntensity: 0.5,
+// 	})
+// );
+// sphere.castShadow = true;
+// sphere.position.y = 0.5;
+// scene.add(sphere);
 
 /**
  * Floor
@@ -197,6 +198,60 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 /**
+ * utils
+ */
+const objectToUpdate: any[] = [];
+
+// Sphere
+const sphereGeometry = new THREE.SphereGeometry(1, 20, 20);
+const sphereMaterial = new THREE.MeshStandardMaterial({
+	metalness: 0.3,
+	roughness: 0.4,
+	envMap: environmentMapTexture,
+});
+
+/**
+ * This will create a Three.js sphere along with a Cannon.js physics sphere
+ * @param radius radius of the sphere
+ * @param position position of the sphere
+ */
+const createSphere = (radius: number, position: THREE.Vector3) => {
+	// Three.js mesh
+	const mesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
+	mesh.scale.set(radius, radius, radius);
+	mesh.castShadow = true;
+	mesh.position.copy(position);
+	scene.add(mesh);
+
+	// Cannon.js body
+	const shape = new CANNON.Sphere(radius);
+	const body = new CANNON.Body({
+		mass: 1,
+		shape,
+		position: new CANNON.Vec3(0, 3, 0),
+		material: defaultMaterial,
+	});
+	body.position.copy(position as unknown as CANNON.Vec3);
+	world.addBody(body);
+
+	// Save in the updatable objects array
+	objectToUpdate.push({
+		mesh,
+		body,
+	});
+};
+
+createSphere(0.5, new THREE.Vector3(0, 3, 0));
+
+debugObject.createSphere = () => {
+	createSphere(
+		Math.random(),
+		new THREE.Vector3(Math.random() - 0.5 * 3, 3, Math.random() - 0.5 * 3)
+	);
+};
+gui.add(debugObject, "createSphere").name("Click to Create Sphere");
+
+/**
  * Animate
  */
 const clock = new THREE.Clock();
@@ -207,7 +262,7 @@ const tick = () => {
 	const deltaTime = elapsedTime - prevElapsedTime;
 
 	// Update Physics World
-	sphereBody.applyForce(new CANNON.Vec3(-0.5, 0, 0), sphereBody.position);
+	// sphereBody.applyForce(new CANNON.Vec3(-0.5, 0, 0), sphereBody.position);
 
 	/**
 	 *  this is used to update the physics world
@@ -218,7 +273,15 @@ const tick = () => {
 	 */
 	world.step(1 / 60, deltaTime, 3);
 
-	sphere.position.copy(sphereBody.position as unknown as Vector3);
+	// sphere.position.copy(sphereBody.position as unknown as THREE.Vector3);
+
+	for (const obj of objectToUpdate) {
+		obj.mesh.position.copy(obj.body.position as unknown as THREE.Vector3);
+		obj.mesh.quaternion.copy(
+			obj.body.quaternion as unknown as THREE.Quaternion
+		);
+	}
+
 	// Update controls
 	controls.update();
 
