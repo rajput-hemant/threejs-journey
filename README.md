@@ -43,6 +43,7 @@
 - ### 03 - Advanced Techniques
 
   - [**22 - Physics**][22c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][22]**
+  - [**23 - Imported Modules**][23c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][23]**
 
 <div align="center">
 
@@ -106,6 +107,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [20c]: src/02-classic-techniques/20-raycaster/
 [21c]: src/02-classic-techniques/21-scroll-based-animations/
 [22c]: src/03-advanced-techniques/22-physics/
+[23c]: src/03-advanced-techniques/23-imported-modules/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -128,6 +130,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [20]: https://raycaster-threejs-journey.vercel.app
 [21]: https://scroll-based-animations-threejs-journey.vercel.app
 [22]: https://physics-threejs-journey.vercel.app
+[23]: https://imported-modules-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 

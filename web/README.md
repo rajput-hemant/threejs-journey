@@ -32,6 +32,7 @@
   - [**19 - Galaxy Generator**][19c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][19]**
   - [**20 - Raycaster**][20c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][20]**
   - [**21 - Scroll Based Animations**][21c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][21]**
+  - [**23 - Imported Modules**][23c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][23]**
 
 - ### 03 - Advanced Techniques
 
@@ -101,6 +102,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [20c]: ../src/02-classic-techniques/20-raycaster/
 [21c]: ../src/02-classic-techniques/21-scroll-based-animations/
 [22c]: ../src/03-advanced-techniques/22-physics/
+[23c]: ../src/03-advanced-techniques/23-imported-modules/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -123,6 +125,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [20]: https://raycaster-threejs-journey.vercel.app
 [21]: https://scroll-based-animations-threejs-journey.vercel.app
 [22]: https://physics-threejs-journey.vercel.app
+[23]: https://imported-modules-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 

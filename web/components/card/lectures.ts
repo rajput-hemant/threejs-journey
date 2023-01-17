@@ -102,6 +102,11 @@ const lectures: Lectures = {
 			index: "22",
 			href: "https://physics-threejs-journey.vercel.app",
 		},
+		{
+			name: "Imported Modules",
+			index: "23",
+			href: "https://imported-modules-threejs-journey.vercel.app",
+		},
 	],
 };
 
