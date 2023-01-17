@@ -2,10 +2,13 @@
 
 # 11 - Textures
 
-#### Course: [ThreeJS Journey][course] By Bruno Simon
+**[<kbd> <br> **Click to view Live Demo** <br> </kbd>][demo]** &nbsp;&nbsp;
 
-</div>
+#### Course: [ThreeJS Journey][course] By Bruno Simon
 
 <!-----------------------------------{ Links }---------------------------------->
 
 [course]: https://threejs-journey.com
+[demo]: https://textures-threejs-journey.vercel.app
+
+</div>

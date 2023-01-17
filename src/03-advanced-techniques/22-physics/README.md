@@ -2,10 +2,13 @@
 
 # 22 - Physics
 
-#### Course: [ThreeJS Journey][course] By Bruno Simon
+**[<kbd> <br> **Click to view Live Demo** <br> </kbd>][demo]** &nbsp;&nbsp;
 
-</div>
+#### Course: [ThreeJS Journey][course] By Bruno Simon
 
 <!-----------------------------------{ Links }---------------------------------->
 
 [course]: https://threejs-journey.com
+[demo]: https://physics-threejs-journey.vercel.app
+
+</div>
