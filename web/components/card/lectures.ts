@@ -107,6 +107,11 @@ const lectures: Lectures = {
 			index: "23",
 			href: "https://imported-modules-threejs-journey.vercel.app",
 		},
+		{
+			name: "Custom model w/ Blender",
+			index: "24",
+			href: "https://custom-model-with-blender-threejs-journey.vercel.app",
+		},
 	],
 };
 
