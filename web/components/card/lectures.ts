@@ -112,6 +112,11 @@ const lectures: Lectures = {
 			index: "24",
 			href: "https://custom-model-with-blender-threejs-journey.vercel.app",
 		},
+		{
+			name: "Realistic Render",
+			index: "25",
+			href: "https://realistic-render-threejs-journey.vercel.app",
+		},
 	],
 };
 
