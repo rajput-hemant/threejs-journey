@@ -1,34 +1,36 @@
 import * as THREE from "three";
 
 import Experience from "../Experience";
+import Resources from "../utils/Resources";
 import Environment from "./Environment";
+import Floor from "./Floor";
+import Fox from "./Fox";
 
 export default class World {
 	experience: Experience;
 	scene: THREE.Scene;
+	resources: Resources;
 	environment?: Environment;
-	resourses: any;
+	floor?: Floor;
+	fox?: Fox;
 
 	constructor() {
 		this.experience = new Experience();
 		this.scene = this.experience.scene!;
-		this.resourses = this.experience.resources!;
-
-		const testMesh = new THREE.Mesh(
-			new THREE.BoxGeometry(1, 1, 1),
-			new THREE.MeshStandardMaterial({
-				// wireframe: true
-			})
-		);
-
-		this.scene.add(testMesh);
+		this.resources = this.experience.resources!;
 
 		/**
-		 * When all the resourses are loaded, we can start the experience
+		 * When all the Resources are loaded, we can start the experience
 		 */
-		this.resourses.on("ready", () => {
+		this.resources.on("ready", () => {
 			// Setup
+			this.floor = new Floor();
+			this.fox = new Fox();
 			this.environment = new Environment();
 		});
+	}
+
+	update() {
+		this.fox?.update();
 	}
 }

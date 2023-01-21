@@ -1,19 +1,19 @@
 import * as THREE from "three";
 
 import Experience from "../Experience";
-import Resourses from "../utils/Resources";
+import Resources from "../utils/Resources";
 
 export default class Environment {
 	experience: Experience;
 	scene: THREE.Scene;
-	resourses: Resourses;
+	resources: Resources;
 	sunlight?: THREE.DirectionalLight;
 	enviromentMap?: any = {};
 
 	constructor() {
 		this.experience = new Experience();
 		this.scene = this.experience.scene!;
-		this.resourses = this.experience.resources!;
+		this.resources = this.experience.resources!;
 
 		this.setSunlight();
 		this.setEnvironmentMap();
@@ -32,15 +32,19 @@ export default class Environment {
 
 	setEnvironmentMap() {
 		this.enviromentMap!.intensity = 0.5;
-		this.enviromentMap!.texture = this.resourses.items.environmentMapTexture;
+		this.enviromentMap!.texture = this.resources.items.environmentMapTexture;
 		this.enviromentMap!.texture.encoding = THREE.sRGBEncoding;
 
 		this.scene.environment = this.enviromentMap!.texture;
 
 		const updateMaterials = () => {
 			this.scene.traverse((child) => {
-				if (child instanceof THREE.Mesh) {
+				if (
+					child instanceof THREE.Mesh &&
+					child.material instanceof THREE.MeshStandardMaterial
+				) {
 					child.material.envMap = this.enviromentMap!.texture;
+					child.material.envMapIntensity = this.enviromentMap.intensity;
 					child.material.needsUpdate = true;
 				}
 			});

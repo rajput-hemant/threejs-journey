@@ -4,7 +4,7 @@ import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Source } from "../sources";
 import EventEmitter from "./EventEmitter";
 
-export default class Resourses extends EventEmitter {
+export default class Resources extends EventEmitter {
 	sources: Source[];
 	items: any;
 	toLoad: number;
