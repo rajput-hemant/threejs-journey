@@ -2,7 +2,7 @@
 
 # 23 - Imported Modules
 
-**[<kbd> <br> **Live Demo** <br> </kbd>][demo]**
+**[<kbd> <br> **Click to view Live Demo** <br> </kbd>][demo]**
 
 #### Course: [ThreeJS Journey][course] By Bruno Simon
 
