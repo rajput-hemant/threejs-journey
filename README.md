@@ -45,7 +45,8 @@
   - [**22 - Physics**][22c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][22]**
   - [**23 - Imported Modules**][23c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][23]**
   - [**24 - Custom model w/ Blender**][24c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][24]**
-  - [**25 - Realistic Render**][24c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][25]**
+  - [**25 - Realistic Render**][25c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][25]**
+  - [**26 - Code Structuring for Bigger Projects**][26c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][26]**
 
 <div align="center">
 
@@ -112,6 +113,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [23c]: src/03-advanced-techniques/23-imported-modules/
 [24c]: src/03-advanced-techniques/24-custom-model-with-blender/
 [25c]: src/03-advanced-techniques/25-realistic-render/
+[26c]: src/03-advanced-techniques/26-code-structuring-for-bigger-projects/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -137,6 +139,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [23]: https://imported-modules-threejs-journey.vercel.app
 [24]: https://custom-model-with-blender-threejs-journey.vercel.app
 [25]: https://realistic-render-threejs-journey.vercel.app
+[26]: https://code-structuring-for-bigger-projects-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 

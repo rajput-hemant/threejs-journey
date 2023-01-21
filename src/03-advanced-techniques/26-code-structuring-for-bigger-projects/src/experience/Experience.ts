@@ -8,6 +8,7 @@ import Camera from "./Camera";
 import Renderer from "./Renderer";
 import World from "./world/World";
 import Resources from "./utils/Resources";
+import Debug from "./utils/Debug";
 
 declare global {
 	interface Window {
@@ -18,6 +19,7 @@ declare global {
 let instance: Experience;
 
 export default class Experience {
+	debug?: Debug;
 	canvas?: HTMLElement;
 	sizes?: Sizes;
 	time?: Time;
@@ -50,6 +52,7 @@ export default class Experience {
 		/**
 		 * Setup
 		 */
+		this.debug = new Debug();
 		this.sizes = new Sizes();
 		this.time = new Time();
 		this.scene = new THREE.Scene();
@@ -78,5 +81,32 @@ export default class Experience {
 		this.camera!.update();
 		this.world!.update();
 		this.renderer!.update();
+	}
+
+	destory() {
+		this.sizes!.off("resize");
+		this.time!.off("tick");
+
+		// Traverse the whole scene and dispose of all the objects
+		this.scene!.traverse((child) => {
+			if (child instanceof THREE.Mesh) {
+				child.geometry.dispose();
+
+				// Loop through all the material properties and dispose of them
+				for (const key in child.material) {
+					const value = child.material[key];
+					if (value && typeof value === "object" && "dispose" in value) {
+						value.dispose();
+					}
+				}
+			}
+		});
+
+		// Dispose of the scene
+		this.camera!.orbitControls?.dispose();
+		this.renderer!.renderer?.dispose();
+
+		// Destroy the debug
+		this.debug?.ui!.destroy();
 	}
 }

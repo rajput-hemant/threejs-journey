@@ -1,9 +1,7 @@
 import "./style.css";
 import Experience from "./experience/Experience";
 
-const experience = new Experience(
-	document.querySelector("canvas.webgl") as HTMLElement
-);
+new Experience(document.querySelector("canvas.webgl") as HTMLElement);
 
 // import * as THREE from "three";
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";

@@ -1,6 +1,7 @@
 import * as THREE from "three";
 
 import Experience from "../Experience";
+import Debug from "../utils/Debug";
 import Resources from "../utils/Resources";
 
 export default class Environment {
@@ -9,11 +10,18 @@ export default class Environment {
 	resources: Resources;
 	sunlight?: THREE.DirectionalLight;
 	enviromentMap?: any = {};
+	debug?: Debug;
+	debugFolder?: dat.GUI;
 
 	constructor() {
 		this.experience = new Experience();
 		this.scene = this.experience.scene!;
 		this.resources = this.experience.resources!;
+		this.debug = this.experience.debug;
+
+		if (this.debug?.active) {
+			this.debugFolder = this.debug.ui!.addFolder("environment");
+		}
 
 		this.setSunlight();
 		this.setEnvironmentMap();
@@ -28,6 +36,33 @@ export default class Environment {
 		this.sunlight.position.set(3.5, 2, -1.25);
 
 		this.scene.add(this.sunlight);
+
+		// Debug
+		if (this.debug?.active) {
+			this.debugFolder!.add(this.sunlight, "intensity")
+				.name("sunlightIntensity")
+				.min(0)
+				.max(10)
+				.step(0.001);
+
+			this.debugFolder!.add(this.sunlight.position, "x")
+				.name("sunlightX")
+				.min(-10)
+				.max(10)
+				.step(0.001);
+
+			this.debugFolder!.add(this.sunlight.position, "y")
+				.name("sunlightY")
+				.min(-10)
+				.max(10)
+				.step(0.001);
+
+			this.debugFolder!.add(this.sunlight.position, "z")
+				.name("sunlightZ")
+				.min(-10)
+				.max(10)
+				.step(0.001);
+		}
 	}
 
 	setEnvironmentMap() {
@@ -51,5 +86,15 @@ export default class Environment {
 		};
 
 		updateMaterials();
+
+		// Debug
+		if (this.debug?.active) {
+			this.debugFolder!.add(this.enviromentMap!, "intensity")
+				.name("enviromentMapIntensity")
+				.min(0)
+				.max(1)
+				.step(0.001)
+				.onChange(updateMaterials);
+		}
 	}
 }

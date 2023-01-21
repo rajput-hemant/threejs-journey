@@ -117,6 +117,11 @@ const lectures: Lectures = {
 			index: "25",
 			href: "https://realistic-render-threejs-journey.vercel.app",
 		},
+		{
+			name: "Code Structuring for Bigger Projects",
+			index: "26",
+			href: "https://code-structuring-for-bigger-projects-threejs-journey.vercel.app",
+		},
 	],
 };
 
