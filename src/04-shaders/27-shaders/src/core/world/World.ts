@@ -18,9 +18,16 @@ export default class World {
 		this.resources = this.core.resources!;
 
 		// Setup
-		this.base = new Base();
-		this.environment = new Environment();
+		/**
+		 * When all the Resources are loaded, we can start the experience
+		 */
+		this.resources.on("ready", () => {
+			this.base = new Base();
+			this.environment = new Environment();
+		});
 	}
 
-	update() {}
+	update() {
+		this.base?.update();
+	}
 }
