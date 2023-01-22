@@ -41,6 +41,10 @@
   - [**25 - Realistic Render**][25c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][25]**
   - [**26 - Code Structuring for Bigger Projects**][26c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][26]**
 
+- ### 04 - Shaders
+
+  - [**27 - Shaders**][27c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][27]**
+
 <div align="center">
 
 ## Building from Source
@@ -109,6 +113,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [24c]: ../src/03-advanced-techniques/24-custom-model-with-blender/
 [25c]: ../src/03-advanced-techniques/25-realistic-render/
 [26c]: ../src/03-advanced-techniques/26-code-structuring-for-bigger-projects/
+[27c]: ../src/04-shaders/27-shaders/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -135,6 +140,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [24]: https://custom-model-with-blender-threejs-journey.vercel.app
 [25]: https://realistic-render-threejs-journey.vercel.app
 [26]: https://code-structuring-for-bigger-projects-threejs-journey.vercel.app
+[27]: https://shaders-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 

@@ -1,4 +1,7 @@
-precision mediump float;
+/*
+removing because it is already defined in the ShaderMaterial class in three.js
+*/
+// precision mediump float;
 
 uniform vec3 uColor;
 uniform sampler2D uTexture;

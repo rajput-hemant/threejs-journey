@@ -123,6 +123,13 @@ const lectures: Lectures = {
 			href: "https://code-structuring-for-bigger-projects-threejs-journey.vercel.app",
 		},
 	],
+	"04": [
+		{
+			name: "Shaders",
+			index: "27",
+			href: "https://shaders-threejs-journey.vercel.app",
+		},
+	],
 };
 
 export default lectures;

@@ -2,10 +2,12 @@ import * as THREE from "three";
 
 import Core from "../core";
 import Resources from "../utils/Resources";
-import vertexShader from "../../shaders/test2/vertex.glsl";
-import fragmentShader from "../../shaders/test2/fragment.glsl";
 import Debug from "../utils/Debug";
 import Time from "../utils/Time";
+import testVertexShader from "../../shaders/test/vertex.glsl";
+import testFragmentShader from "../../shaders/test/fragment.glsl";
+import flagVertexShader from "../../shaders/test2/vertex.glsl";
+import flagFragmentShader from "../../shaders/test2/fragment.glsl";
 
 export default class Base {
 	core: Core;
@@ -13,7 +15,7 @@ export default class Base {
 	resources: Resources;
 	geometry?: THREE.BufferGeometry;
 	texture?: any = {};
-	material?: THREE.RawShaderMaterial;
+	material?: THREE.ShaderMaterial | THREE.RawShaderMaterial;
 	mesh?: THREE.Mesh;
 	debug?: Debug;
 	debugObject?: any = {};
@@ -27,13 +29,13 @@ export default class Base {
 		this.time = this.core.time;
 
 		if (this.debug?.active) {
-			this.debugObject!.material = this.core.debug!.ui!.addFolder("Material");
+			this.debugObject!.material =
+				this.core.debug!.ui!.addFolder("Flag Material");
 		}
 
 		this.setGeometry();
 		this.setTexture();
 		this.setMaterial();
-		this.setMesh();
 	}
 
 	setGeometry() {
@@ -61,9 +63,32 @@ export default class Base {
 	}
 
 	setMaterial() {
+		/**
+		 * RawShaderMaterial is a material that allows you to use your own shaders
+		 * without any built-in THREE.js specific code.
+		 *
+		 * Test Shader
+		 */
 		this.material = new THREE.RawShaderMaterial({
-			vertexShader: vertexShader,
-			fragmentShader: fragmentShader,
+			vertexShader: testVertexShader,
+			fragmentShader: testFragmentShader,
+			side: THREE.DoubleSide,
+		});
+
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.z = -0.5;
+
+		this.scene.add(this.mesh);
+
+		/**
+		 * ShaderMaterial is a material that allows you to use your own shaders
+		 * with little bit of built-in THREE.js specific code.
+		 *
+		 * Flag Shader
+		 */
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: flagVertexShader,
+			fragmentShader: flagFragmentShader,
 			side: THREE.DoubleSide,
 			uniforms: {
 				uFrequency: { value: new THREE.Vector2(10, 5) },
@@ -72,6 +97,11 @@ export default class Base {
 				uTexture: { value: this.texture.flagTexture },
 			},
 		});
+
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.scale.y = 2 / 3;
+
+		this.scene.add(this.mesh);
 
 		if (this.debug?.active) {
 			this.debugObject!.material!.add(
@@ -92,13 +122,6 @@ export default class Base {
 				.step(0.01)
 				.name("frequencyY");
 		}
-	}
-
-	setMesh() {
-		this.mesh = new THREE.Mesh(this.geometry, this.material);
-		this.mesh.scale.y = 2 / 3;
-
-		this.scene.add(this.mesh);
 	}
 
 	update() {

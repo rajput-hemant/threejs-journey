@@ -12,14 +12,17 @@ direction of the Mesh, the vertices should get bigger, etc.
 :projectionMatrix:
   - will finally transform our coordinates into the final clip space coordinates.
 */
-uniform mat4 projectionMatrix;
-uniform mat4 viewMatrix;
-uniform mat4 modelMatrix;
+/*
+removing these because these are already defined in ShaderMaterial class in three.js
+*/
+// uniform mat4 projectionMatrix;
+// uniform mat4 viewMatrix;
+// uniform mat4 modelMatrix;
 uniform vec2 uFrequency;
 uniform float uTime;
 
-attribute vec3 position;
-attribute vec2 uv;
+// attribute vec3 position;
+// attribute vec2 uv;
 
 varying vec2 vUv;
 varying float vElevation;
