@@ -1,21 +1,21 @@
 import * as THREE from "three";
 
-import Experience from "../Experience";
+import Core from "../core";
 import Resources from "../utils/Resources";
 import Environment from "./Environment";
 import Base from "./Base";
 
 export default class World {
-	experience: Experience;
+	core: Core;
 	scene: THREE.Scene;
 	resources: Resources;
 	environment?: Environment;
 	base?: Base;
 
 	constructor() {
-		this.experience = new Experience();
-		this.scene = this.experience.scene!;
-		this.resources = this.experience.resources!;
+		this.core = new Core();
+		this.scene = this.core.scene!;
+		this.resources = this.core.resources!;
 
 		// Setup
 		this.base = new Base();

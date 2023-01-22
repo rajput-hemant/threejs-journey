@@ -1,11 +1,11 @@
 import * as THREE from "three";
 
-import Experience from "../Experience";
+import Core from "../core";
 import Debug from "../utils/Debug";
 import Resources from "../utils/Resources";
 
 export default class Environment {
-	experience: Experience;
+	core: Core;
 	scene: THREE.Scene;
 	resources: Resources;
 	sunlight?: THREE.DirectionalLight;
@@ -14,10 +14,10 @@ export default class Environment {
 	debugFolder?: dat.GUI;
 
 	constructor() {
-		this.experience = new Experience();
-		this.scene = this.experience.scene!;
-		this.resources = this.experience.resources!;
-		this.debug = this.experience.debug;
+		this.core = new Core();
+		this.scene = this.core.scene!;
+		this.resources = this.core.resources!;
+		this.debug = this.core.debug;
 
 		if (this.debug?.active) {
 			this.debugFolder = this.debug.ui!.addFolder("environment");

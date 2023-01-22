@@ -12,13 +12,13 @@ import Debug from "./utils/Debug";
 
 declare global {
 	interface Window {
-		experience: any;
+		core: any;
 	}
 }
 
-let instance: Experience;
+let instance: Core;
 
-export default class Experience {
+export default class Core {
 	debug?: Debug;
 	canvas?: HTMLElement;
 	sizes?: Sizes;
@@ -32,7 +32,7 @@ export default class Experience {
 	constructor(canvas: HTMLElement | null = null) {
 		/**
 		 * Singleton
-		 * If there is already an instance of Experience, return it
+		 * If there is already an instance of Core, return it
 		 */
 		if (instance) {
 			return instance;
@@ -40,9 +40,9 @@ export default class Experience {
 		instance = this;
 
 		/**
-		 * Global reference to the experience
+		 * Global reference to the core
 		 */
-		window.experience = this;
+		window.core = this;
 
 		/**
 		 * Canvas

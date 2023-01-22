@@ -1,8 +1,6 @@
 import "./style.css";
-import Experience from "./experience/Experience";
+import Core from "./core/core";
 
-const experience = new Experience(
-	document.querySelector("canvas.webgl") as HTMLElement
-);
+const core = new Core(document.querySelector("canvas.webgl") as HTMLElement);
 
-console.log(experience);
+console.log(core);

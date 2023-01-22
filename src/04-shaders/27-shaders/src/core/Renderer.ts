@@ -1,11 +1,11 @@
 import * as THREE from "three";
 
 import Camera from "./Camera";
-import Experience from "./Experience";
+import Core from "./core";
 import Sizes from "./utils/Sizes";
 
 export default class Renderer {
-	experience: Experience;
+	core: Core;
 	canvas: Element;
 	sizes: Sizes;
 	scene: THREE.Scene;
@@ -13,11 +13,11 @@ export default class Renderer {
 	renderer?: THREE.WebGLRenderer;
 
 	constructor() {
-		this.experience = new Experience();
-		this.canvas = this.experience.canvas!;
-		this.sizes = this.experience.sizes!;
-		this.scene = this.experience.scene!;
-		this.camera = this.experience.camera!;
+		this.core = new Core();
+		this.canvas = this.core.canvas!;
+		this.sizes = this.core.sizes!;
+		this.scene = this.core.scene!;
+		this.camera = this.core.camera!;
 
 		this.setRenderer();
 	}
