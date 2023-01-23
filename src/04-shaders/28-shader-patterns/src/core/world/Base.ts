@@ -50,6 +50,7 @@ export default class Base {
 			vertexShader: vertexShader,
 			fragmentShader: fragmentShader,
 			side: THREE.DoubleSide,
+			
 		});
 
 		this.mesh = new THREE.Mesh(this.geometry, this.material);

@@ -129,6 +129,11 @@ const lectures: Lectures = {
 			index: "27",
 			href: "https://shaders-threejs-journey.vercel.app",
 		},
+		{
+			name: "Shader Patterns",
+			index: "28",
+			href: "https://shader-patterns-threejs-journey.vercel.app",
+		},
 	],
 };
 

@@ -51,6 +51,7 @@
 - ### 04 - Shaders
 
   - [**27 - Shaders**][27c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][27]**
+  - [**28 - Shader Patterns**][28c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][28]**
 
 <div align="center">
 
@@ -119,6 +120,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [25c]: src/03-advanced-techniques/25-realistic-render/
 [26c]: src/03-advanced-techniques/26-code-structuring-for-bigger-projects/
 [27c]: src/04-shaders/27-shaders/
+[28c]: src/04-shaders/28-shader-patterns/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -146,6 +148,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [25]: https://realistic-render-threejs-journey.vercel.app
 [26]: https://code-structuring-for-bigger-projects-threejs-journey.vercel.app
 [27]: https://shaders-threejs-journey.vercel.app
+[28]: https://shader-patterns-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 
