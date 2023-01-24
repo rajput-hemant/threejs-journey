@@ -1,8 +1,8 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
-import Sizes from "./utils/Sizes";
 import Core from "./core";
+import Sizes from "./utils/Sizes";
 
 export default class Camera {
 	core: Core;
@@ -30,7 +30,7 @@ export default class Camera {
 			0.1,
 			100
 		);
-		this.instance.position.set(1, 1, 1);
+		this.instance.position.set(1, 0.5, 1);
 		this.scene.add(this.instance);
 	}
 
