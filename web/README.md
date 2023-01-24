@@ -45,6 +45,7 @@
 
   - [**27 - Shaders**][27c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][27]**
   - [**28 - Shader Patterns**][28c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][28]**
+  - [**29 - Raging Sea**][29c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][29]**
 
 <div align="center">
 
@@ -116,6 +117,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [26c]: ../src/03-advanced-techniques/26-code-structuring-for-bigger-projects/
 [27c]: ../src/04-shaders/27-shaders/
 [28c]: ../src/04-shaders/28-shader-patterns/
+[29c]: ../src/04-shaders/29-raging-sea/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -144,6 +146,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [26]: https://code-structuring-for-bigger-projects-threejs-journey.vercel.app
 [27]: https://shaders-threejs-journey.vercel.app
 [28]: https://shader-patterns-threejs-journey.vercel.app
+[29]: https://raging-sea-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 

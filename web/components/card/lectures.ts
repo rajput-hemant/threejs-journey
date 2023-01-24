@@ -134,6 +134,11 @@ const lectures: Lectures = {
 			index: "28",
 			href: "https://shader-patterns-threejs-journey.vercel.app",
 		},
+		{
+			name: "Raging Sea",
+			index: "29",
+			href: "https://raging-sea-threejs-journey.vercel.app",
+		},
 	],
 };
 
