@@ -6,7 +6,7 @@ export default class Debug {
 	constructor() {
 		this.ui = new Pane({
 			title: "Debug panel",
-			expanded: true,
+			expanded: false,
 		});
 	}
 }

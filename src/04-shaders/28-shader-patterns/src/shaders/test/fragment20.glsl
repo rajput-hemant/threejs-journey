@@ -7,5 +7,10 @@ void main() {
   green, blue, and alpha. Each component is a floating point number
   between 0.0 and 1.0. The default value is (0.0, 0.0, 0.0, 0.0).
   */
-  gl_FragColor = vec4(vUv, 1.0, 1.0);
+  float square1 = step(0.2, max(abs(vUv.x - 0.5), abs(vUv.y - 0.5)));
+  float square2 = 1.0 - step(0.25, max(abs(vUv.x - 0.5), abs(vUv.y - 0.5)));
+
+  float strength = square1 * square2;
+
+  gl_FragColor = vec4(strength, strength, strength, 1.0);
 }
