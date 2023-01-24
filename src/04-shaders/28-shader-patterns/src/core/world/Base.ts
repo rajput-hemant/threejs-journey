@@ -45,6 +45,16 @@ import fragmentShader37 from "../../shaders/test/fragment37.glsl";
 import fragmentShader38 from "../../shaders/test/fragment38.glsl";
 import fragmentShader39 from "../../shaders/test/fragment39.glsl";
 import fragmentShader40 from "../../shaders/test/fragment40.glsl";
+import fragmentShader41 from "../../shaders/test/fragment41.glsl";
+import fragmentShader42 from "../../shaders/test/fragment42.glsl";
+import fragmentShader43 from "../../shaders/test/fragment43.glsl";
+import fragmentShader44 from "../../shaders/test/fragment44.glsl";
+import fragmentShader45 from "../../shaders/test/fragment45.glsl";
+import fragmentShader46 from "../../shaders/test/fragment46.glsl";
+import fragmentShader47 from "../../shaders/test/fragment47.glsl";
+import fragmentShader48 from "../../shaders/test/fragment48.glsl";
+import fragmentShader49 from "../../shaders/test/fragment49.glsl";
+import fragmentShader50 from "../../shaders/test/fragment50.glsl";
 
 export default class Base {
 	core: Core;
@@ -514,6 +524,116 @@ export default class Base {
 		this.mesh = new THREE.Mesh(this.geometry, this.material);
 		this.mesh.position.x = 2;
 		this.mesh.position.z = 7;
+		this.scene.add(this.mesh);
+
+		// Pattern 31
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader41,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = -2;
+		this.mesh.position.z = 8;
+		this.scene.add(this.mesh);
+
+		// Pattern 32
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader42,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = -1;
+		this.mesh.position.z = 8;
+		this.scene.add(this.mesh);
+
+		// Pattern 33
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader43,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = 0;
+		this.mesh.position.z = 8;
+		this.scene.add(this.mesh);
+
+		// Pattern 34
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader44,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = 1;
+		this.mesh.position.z = 8;
+		this.scene.add(this.mesh);
+
+		// Pattern 35
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader45,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = 2;
+		this.mesh.position.z = 8;
+		this.scene.add(this.mesh);
+
+		// Pattern 36
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader46,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = -2;
+		this.mesh.position.z = 9;
+		this.scene.add(this.mesh);
+
+		// Pattern 37
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader47,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = -1;
+		this.mesh.position.z = 9;
+		this.scene.add(this.mesh);
+
+		// Pattern 38
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader48,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = 0;
+		this.mesh.position.z = 9;
+		this.scene.add(this.mesh);
+
+		// Pattern 39
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader49,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = 1;
+		this.mesh.position.z = 9;
+		this.scene.add(this.mesh);
+
+		// Pattern 50
+		this.material = new THREE.ShaderMaterial({
+			vertexShader: vertexShader,
+			fragmentShader: fragmentShader50,
+			side: THREE.DoubleSide,
+		});
+		this.mesh = new THREE.Mesh(this.geometry, this.material);
+		this.mesh.position.x = 2;
+		this.mesh.position.z = 9;
 		this.scene.add(this.mesh);
 	}
 
