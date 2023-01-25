@@ -5,13 +5,16 @@ import Time from "../utils/Time";
 import Debug from "../utils/Debug";
 import Resources from "../utils/Resources";
 
+import vertexShader from "../../shaders/galaxy/vertex.glsl";
+import fragmentShader from "../../shaders/galaxy/fragment.glsl";
+
 export default class Base {
 	core: Core;
 	scene: THREE.Scene;
 	resources: Resources;
 	geometry?: THREE.BufferGeometry;
 	texture?: any = {};
-	material?: THREE.PointsMaterial;
+	material?: THREE.ShaderMaterial;
 	points?: THREE.Points;
 	mesh?: THREE.Mesh;
 	debug?: Debug;
@@ -60,6 +63,8 @@ export default class Base {
 		this.geometry = new THREE.BufferGeometry();
 		const positions = new Float32Array(this.params.count * 3);
 		const colors = new Float32Array(this.params.count * 3);
+		const scale = new Float32Array(this.params.count * 1);
+		const randomness = new Float32Array(this.params.count * 3);
 
 		const insideColor = new THREE.Color(this.params.insideColor);
 		const outsideColor = new THREE.Color(this.params.outsideColor);
@@ -73,6 +78,13 @@ export default class Base {
 			const branchAngle =
 				((i % this.params.branches) / this.params.branches) * Math.PI * 2;
 
+			positions[i3] = Math.cos(branchAngle) * radius;
+			positions[i3 + 1] = 0;
+			positions[i3 + 2] = Math.sin(branchAngle) * radius;
+
+			/**
+			 * Randomness
+			 */
 			const randomX =
 				Math.pow(Math.random(), this.params.randomnessPower) *
 				(Math.random() < 0.5 ? 1 : -1) *
@@ -91,9 +103,9 @@ export default class Base {
 				this.params.randomness *
 				radius;
 
-			positions[i3] = Math.cos(branchAngle) * radius + randomX;
-			positions[i3 + 1] = randomY;
-			positions[i3 + 2] = Math.sin(branchAngle) * radius + randomZ;
+			randomness[i3] = randomX;
+			randomness[i3 + 1] = randomY;
+			randomness[i3 + 2] = randomZ;
 
 			// Color
 			const mixedColor = insideColor.clone();
@@ -102,6 +114,9 @@ export default class Base {
 			colors[i3] = mixedColor.r;
 			colors[i3 + 1] = mixedColor.g;
 			colors[i3 + 2] = mixedColor.b;
+
+			// Scale
+			scale[i] = Math.random();
 		}
 
 		this.geometry.setAttribute(
@@ -109,15 +124,24 @@ export default class Base {
 			new THREE.BufferAttribute(positions, 3)
 		);
 		this.geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+		this.geometry.setAttribute("aScale", new THREE.BufferAttribute(scale, 1));
+		this.geometry.setAttribute(
+			"aRandomness",
+			new THREE.BufferAttribute(randomness, 3)
+		);
 	}
 
 	setMaterial() {
-		this.material = new THREE.PointsMaterial({
-			size: this.params.size,
-			sizeAttenuation: true,
+		this.material = new THREE.ShaderMaterial({
 			depthWrite: false,
 			blending: THREE.AdditiveBlending,
 			vertexColors: true,
+			vertexShader,
+			fragmentShader,
+			uniforms: {
+				uTime: { value: 0 },
+				uSize: { value: 30 * this.core.renderer!.renderer!.getPixelRatio() },
+			},
 		});
 	}
 
@@ -127,17 +151,16 @@ export default class Base {
 	}
 
 	setDebug() {
-		this.debugObject.stars = this.debug!.ui!.addFolder({
-			title: "Stars",
-		});
-		this.debugObject.galaxy = this.debug!.ui!.addFolder({
-			title: "Galaxy",
-		});
 		this.debugObject.random = this.debug!.ui!.addFolder({
 			title: "Randomness",
 		});
 		this.debugObject.color = this.debug!.ui!.addFolder({
 			title: "Colors",
+		});
+
+		// Stars
+		this.debugObject.stars = this.debug!.ui!.addFolder({
+			title: "Stars",
 		});
 
 		this.debugObject.stars
@@ -150,6 +173,22 @@ export default class Base {
 			.on("change", (e: THREE.Event) => {
 				if (e.last) this.generateGalaxy();
 			});
+
+		// this.debugObject.stars
+		// 	.addInput(this.material!.uniforms.uSize, "value", {
+		// 		label: "Size",
+		// 		min: 1,
+		// 		max: 10,
+		// 		step: 1,
+		// 	})
+		// 	.on("change", (e: THREE.Event) => {
+		// 		if (e.last) this.generateGalaxy();
+		// 	});
+
+		// Galaxy
+		this.debugObject.galaxy = this.debug!.ui!.addFolder({
+			title: "Galaxy",
+		});
 
 		this.debugObject.galaxy
 			.addInput(this.params, "radius", {
@@ -214,5 +253,7 @@ export default class Base {
 
 	setTexture() {}
 
-	update() {}
+	update() {
+		this.material!.uniforms.uTime.value = this.core.time!.elapsed;
+	}
 }
