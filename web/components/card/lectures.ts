@@ -144,6 +144,11 @@ const lectures: Lectures = {
 			index: "30",
 			href: "https://animated-galaxy-threejs-journey.vercel.app",
 		},
+		{
+			name: "Modified Materials",
+			index: "30",
+			href: "https://modified-materials-threejs-journey.vercel.app",
+		},
 	],
 };
 

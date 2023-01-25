@@ -47,6 +47,7 @@
   - [**28 - Shader Patterns**][28c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][28]**
   - [**29 - Raging Sea**][29c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][29]**
   - [**30 - Animated Galaxy**][30c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][30]**
+  - [**31 - Modified Materials**][31c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][31]**
 
 <div align="center">
 
@@ -120,6 +121,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [28c]: ../src/04-shaders/28-shader-patterns/
 [29c]: ../src/04-shaders/29-raging-sea/
 [30c]: ../src/04-shaders/30-animated-galaxy/
+[31c]: ../src/04-shaders/31-modified-materials/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -150,6 +152,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [28]: https://shader-patterns-threejs-journey.vercel.app
 [29]: https://raging-sea-threejs-journey.vercel.app
 [30]: https://animated-galaxy-threejs-journey.vercel.app
+[31]: https://modified-materials-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 
