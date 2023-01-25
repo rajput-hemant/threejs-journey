@@ -139,6 +139,11 @@ const lectures: Lectures = {
 			index: "29",
 			href: "https://raging-sea-threejs-journey.vercel.app",
 		},
+		{
+			name: "Animated Galaxy",
+			index: "30",
+			href: "https://animated-galaxy-threejs-journey.vercel.app",
+		},
 	],
 };
 

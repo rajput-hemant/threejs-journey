@@ -53,6 +53,7 @@
   - [**27 - Shaders**][27c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][27]**
   - [**28 - Shader Patterns**][28c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][28]**
   - [**29 - Raging Sea**][29c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][29]**
+  - [**30 - Animated Galaxy**][30c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][30]**
 
 <div align="center">
 
@@ -123,6 +124,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [27c]: src/04-shaders/27-shaders/
 [28c]: src/04-shaders/28-shader-patterns/
 [29c]: src/04-shaders/29-raging-sea/
+[30c]: src/04-shaders/30-animated-galaxy/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -152,6 +154,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [27]: https://shaders-threejs-journey.vercel.app
 [28]: https://shader-patterns-threejs-journey.vercel.app
 [29]: https://raging-sea-threejs-journey.vercel.app
+[30]: https://animated-galaxy-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 
