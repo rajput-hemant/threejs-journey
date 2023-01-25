@@ -11,6 +11,7 @@ export default class Base {
 	geometry?: THREE.BufferGeometry;
 	texture?: any = {};
 	material?: THREE.MeshStandardMaterial;
+	depthMaterial?: THREE.MeshDepthMaterial;
 	model?: THREE.Mesh;
 	time?: Time;
 	resources: Resources;
@@ -31,6 +32,7 @@ export default class Base {
 		this.setTexture();
 		this.setMaterial();
 		this.setModel();
+		this.setDebug();
 	}
 
 	setGeometry() {}
@@ -41,17 +43,95 @@ export default class Base {
 		this.texture.normalTexture = this.resources.items.normalTexture;
 	}
 
+	private customUniforms = {
+		uTime: { value: 0 },
+	};
+
 	setMaterial() {
 		this.material = new THREE.MeshStandardMaterial({
 			map: this.texture.mapTexture,
 			normalMap: this.texture.normalTexture,
 		});
+
+		this.depthMaterial = new THREE.MeshDepthMaterial({
+			depthPacking: THREE.RGBADepthPacking,
+		});
+
+		// Material before compile
+		this.material.onBeforeCompile = (shader) => {
+			shader.uniforms.uTime = this.customUniforms.uTime;
+
+			shader.vertexShader = shader.vertexShader
+				.replace(
+					"#include <common>",
+					`
+					#include <common>
+
+					uniform float uTime;
+
+					mat2 get2dRotateMatrix(float _angle) {
+						return mat2(cos(_angle), -sin(_angle), sin(_angle), cos(_angle));
+					}
+				`
+				)
+				.replace(
+					"#include <beginnormal_vertex>",
+					`
+					#include <beginnormal_vertex>
+
+					float angle = (position.y + uTime) * 0.5;
+					mat2 rotateMatrix = get2dRotateMatrix(angle);
+
+					objectNormal.xz = rotateMatrix * objectNormal.xz;
+					`
+				)
+				.replace(
+					"#include <begin_vertex>",
+					`
+					#include <begin_vertex>
+
+					transformed.xz = rotateMatrix * transformed.xz;
+					`
+				);
+		};
+
+		// Depth material (drop shadows) before compile
+		this.depthMaterial.onBeforeCompile = (shader) => {
+			shader.uniforms.uTime = this.customUniforms.uTime;
+
+			shader.vertexShader = shader.vertexShader
+				.replace(
+					"#include <common>",
+					`
+					#include <common>
+
+					uniform float uTime;
+
+					mat2 get2dRotateMatrix(float _angle) {
+						return mat2(cos(_angle), -sin(_angle), sin(_angle), cos(_angle));
+					}
+					`
+				)
+				.replace(
+					"#include <begin_vertex>",
+					`
+					#include <begin_vertex>
+
+					float angle = (position.y + uTime) * 0.5;
+					mat2 rotateMatrix = get2dRotateMatrix(angle);
+
+					transformed.xz = rotateMatrix * transformed.xz;
+					`
+				);
+		};
 	}
 
 	setModel() {
 		this.model = this.resource.scene.children[0];
+		this.model!.scale.set(0.6, 0.6, 0.6);
 		this.model!.rotation.y = Math.PI * 0.5;
 		this.model!.material = this.material!;
+		this.model!.customDepthMaterial = this.depthMaterial!;
 
 		this.scene.add(this.model!);
 
@@ -72,7 +152,11 @@ export default class Base {
 		});
 	};
 
-	setDebug() {}
+	setDebug() {
+		this.debug!.ui!.expanded = false;
+	}
 
-	update() {}
+	update() {
+		this.customUniforms.uTime.value = this.time!.elapsed;
+	}
 }
