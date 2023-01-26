@@ -1,14 +1,15 @@
 import * as THREE from "three";
-
 import sources from "./sources";
 
 import Sizes from "./utils/Sizes";
 import Time from "./utils/Time";
+import Debug from "./utils/Debug";
+import Resources from "./utils/Resources";
+
+import World from "./world/World";
 import Camera from "./world/Camera";
 import Renderer from "./world/Renderer";
-import World from "./world/World";
-import Resources from "./utils/Resources";
-import Debug from "./utils/Debug";
+import EffectComposer from "./world/EffectComposer";
 
 declare global {
 	interface Window {
@@ -28,6 +29,7 @@ export default class Core {
 	camera?: Camera;
 	renderer?: Renderer;
 	world?: World;
+	effectComposer?: EffectComposer;
 
 	constructor(canvas: HTMLElement | null = null) {
 		/**
@@ -60,6 +62,7 @@ export default class Core {
 		this.camera = new Camera();
 		this.renderer = new Renderer();
 		this.world = new World();
+		this.effectComposer = new EffectComposer();
 
 		/**
 		 * Custom resize event
@@ -83,7 +86,9 @@ export default class Core {
 	update() {
 		this.camera!.update();
 		this.world!.update();
-		this.renderer!.update();
+		// this.renderer!.update();
+
+		this.effectComposer!.update();
 	}
 
 	destory() {
@@ -107,7 +112,7 @@ export default class Core {
 
 		// Dispose of the scene
 		this.camera!.orbitControls?.dispose();
-		this.renderer!.renderer?.dispose();
+		this.renderer!.instance?.dispose();
 
 		// Destroy the debug
 		this.debug?.ui!.dispose();

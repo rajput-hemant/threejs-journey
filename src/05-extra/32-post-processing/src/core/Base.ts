@@ -64,9 +64,7 @@ export default class Base {
 		});
 	};
 
-	setDebug() {
-		this.debug!.ui!.expanded = false;
-	}
+	setDebug() {}
 
 	update() {}
 }

@@ -10,7 +10,7 @@ export default class Renderer {
 	sizes: Sizes;
 	scene: THREE.Scene;
 	camera: Camera;
-	renderer?: THREE.WebGLRenderer;
+	instance?: THREE.WebGLRenderer;
 
 	constructor() {
 		this.core = new Core();
@@ -23,26 +23,26 @@ export default class Renderer {
 	}
 
 	setRenderer() {
-		this.renderer = new THREE.WebGLRenderer({
+		this.instance = new THREE.WebGLRenderer({
 			canvas: this.canvas,
 			antialias: true,
 		});
-		this.renderer.shadowMap.enabled = true;
-		this.renderer.shadowMap.type = THREE.PCFShadowMap;
-		this.renderer.physicallyCorrectLights = true;
-		this.renderer.outputEncoding = THREE.sRGBEncoding;
-		this.renderer.toneMapping = THREE.ReinhardToneMapping;
-		this.renderer.toneMappingExposure = 1.5;
-		this.renderer.setSize(this.sizes.width, this.sizes.height);
-		this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+		this.instance.shadowMap.enabled = true;
+		this.instance.shadowMap.type = THREE.PCFShadowMap;
+		this.instance.physicallyCorrectLights = true;
+		this.instance.outputEncoding = THREE.sRGBEncoding;
+		this.instance.toneMapping = THREE.ReinhardToneMapping;
+		this.instance.toneMappingExposure = 1.5;
+		this.instance.setSize(this.sizes.width, this.sizes.height);
+		this.instance.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 	}
 
 	resize() {
-		this.renderer!.setSize(this.sizes.width, this.sizes.height);
-		this.renderer!.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+		this.instance!.setSize(this.sizes.width, this.sizes.height);
+		this.instance!.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 	}
 
 	update() {
-		this.renderer!.render(this.scene, this.camera.instance!);
+		this.instance!.render(this.scene, this.camera.instance!);
 	}
 }
