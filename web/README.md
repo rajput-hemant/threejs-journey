@@ -48,6 +48,7 @@
   - [**29 - Raging Sea**][29c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][29]**
   - [**30 - Animated Galaxy**][30c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][30]**
   - [**31 - Modified Materials**][31c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][31]**
+  - [**32 - Post Processing**][32c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][32]**
 
 <div align="center">
 
@@ -122,6 +123,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [29c]: ../src/04-shaders/29-raging-sea/
 [30c]: ../src/04-shaders/30-animated-galaxy/
 [31c]: ../src/04-shaders/31-modified-materials/
+[32c]: ../src/04-shaders/32-post-processing/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -153,6 +155,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [29]: https://raging-sea-threejs-journey.vercel.app
 [30]: https://animated-galaxy-threejs-journey.vercel.app
 [31]: https://modified-materials-threejs-journey.vercel.app
+[32]: https://post-processing-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 

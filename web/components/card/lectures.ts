@@ -146,8 +146,15 @@ const lectures: Lectures = {
 		},
 		{
 			name: "Modified Materials",
-			index: "30",
+			index: "31",
 			href: "https://modified-materials-threejs-journey.vercel.app",
+		},
+	],
+	"05": [
+		{
+			name: "Post Processing",
+			index: "32",
+			href: "https://post-processing-threejs-journey.vercel.app",
 		},
 	],
 };
