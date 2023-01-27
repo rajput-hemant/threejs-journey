@@ -1,12 +1,12 @@
 import { Pane } from "tweakpane";
 
 export default class Debug {
-	ui?: Pane;
+	pane?: Pane;
 
 	constructor() {
-		this.ui = new Pane({
+		this.pane = new Pane({
 			title: "Debug panel",
-			expanded: false,
+			// expanded: false,
 		});
 	}
 }

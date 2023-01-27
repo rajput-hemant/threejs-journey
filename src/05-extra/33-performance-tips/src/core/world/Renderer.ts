@@ -25,6 +25,7 @@ export default class Renderer {
 	setRenderer() {
 		this.instance = new THREE.WebGLRenderer({
 			canvas: this.canvas,
+			powerPreference: "high-performance",
 			antialias: true,
 		});
 		

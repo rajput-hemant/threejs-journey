@@ -10,6 +10,7 @@ import Resources from "./utils/Resources";
 import World from "./world/World";
 import Camera from "./world/Camera";
 import Renderer from "./world/Renderer";
+import FPSMeter from "./utils/FPSMeter";
 
 declare global {
 	interface Window {
@@ -21,6 +22,7 @@ let instance: Core;
 
 export default class Core {
 	debug?: Debug;
+	fps?: FPSMeter;
 	canvas?: HTMLElement;
 	sizes?: Sizes;
 	time?: Time;
@@ -54,6 +56,7 @@ export default class Core {
 		 * Setup
 		 */
 		this.debug = new Debug();
+		this.fps = new FPSMeter();
 		this.sizes = new Sizes();
 		this.time = new Time();
 		this.scene = new THREE.Scene();
@@ -82,9 +85,13 @@ export default class Core {
 	}
 
 	update() {
+		// @ts-ignore
+		this.fps!.graph.begin();
 		this.camera!.update();
 		this.world!.update();
 		this.renderer!.update();
+		// @ts-ignore
+		this.fps!.graph.end();
 	}
 
 	destory() {
@@ -111,6 +118,6 @@ export default class Core {
 		this.renderer!.instance?.dispose();
 
 		// Destroy the debug
-		this.debug?.ui!.dispose();
+		this.debug?.pane!.dispose();
 	}
 }
