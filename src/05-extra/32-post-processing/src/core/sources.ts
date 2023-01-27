@@ -13,6 +13,11 @@ const sources: Source[] = [
 		path: "/models/DamagedHelmet/glTF/DamagedHelmet.gltf",
 	},
 	{
+		name: "normalMap",
+		type: "texture",
+		path: "/textures/interfaceNormalMap.png",
+	},
+	{
 		name: "environmentMapTexture",
 		type: "cubeTexture",
 		path: [
