@@ -156,6 +156,11 @@ const lectures: Lectures = {
 			index: "32",
 			href: "https://post-processing-threejs-journey.vercel.app",
 		},
+		{
+			name: "Performance Tips",
+			index: "33",
+			href: "https://performance-tips-threejs-journey.vercel.app",
+		},
 	],
 };
 
