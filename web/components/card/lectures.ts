@@ -166,6 +166,11 @@ const lectures: Lectures = {
 			index: "34",
 			href: "https://intro-and-loading-progress-threejs-journey.vercel.app",
 		},
+		{
+			name: "Mixing HTML & WebGL",
+			index: "35",
+			href: "https://mixing-html-and-webgl-threejs-journey.vercel.app",
+		},
 	],
 };
 

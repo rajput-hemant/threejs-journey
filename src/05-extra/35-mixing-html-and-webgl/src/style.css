@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	overflow: hidden;
+}
+
+.webgl {
+	position: fixed;
+	top: 0;
+	left: 0;
+	outline: none;
+}
+
+.loading-bar {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: top left;
+	transition: transform 0.5s;
+	will-change: transform;
+}
+
+.loading-bar.ended {
+	transform-origin: top right;
+	transition: transform 1.5s ease-in-out;
+}

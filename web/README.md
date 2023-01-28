@@ -19,7 +19,7 @@
   - [**08 - Fullscreen and Resizing**][8c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][8]**
   - [**09 - Geometries**][9c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][9]**
   - [**10 - Debug UI**][10c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][10]**
-  - [**11- Textures**][11c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][11]**
+  - [**11 - Textures**][11c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][11]**
   - [**12 - Materials**][12c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][12]**
   - [**13 - 3D Text**][13c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][13]**
 
@@ -54,6 +54,7 @@
   - [**32 - Post Processing**][32c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][32]**
   - [**33 - Performance Tips**][33c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][33]**
   - [**34 - Intro & Loading Progress**][34c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][34]**
+  - [**35 - Mixing HTML & WebGL**][35c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][35]**
 
 <div align="center">
 
@@ -131,6 +132,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [32c]: ../src/05-extra/32-post-processing/
 [33c]: ../src/05-extra/33-performance-tips/
 [34c]: ../src/05-extra/34-intro-and-loading-progress/
+[35c]: ../src/05-extra/35-mixing-html-and-webgl/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -165,6 +167,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [32]: https://post-processing-threejs-journey.vercel.app
 [33]: https://performance-tips-threejs-journey.vercel.app
 [34]: https://intro-and-loading-progress-threejs-journey.vercel.app
+[35]: https://mixing-html-and-webgl-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 
