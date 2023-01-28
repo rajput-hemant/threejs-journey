@@ -59,6 +59,7 @@
 - ### 05 - Extra
   - [**32 - Post Processing**][32c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][32]**
   - [**33 - Performance Tips**][33c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][33]**
+  - [**34 - Intro & Loading Progress**][34c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][34]**
 
 <div align="center">
 
@@ -131,8 +132,9 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [29c]: src/04-shaders/29-raging-sea/
 [30c]: src/04-shaders/30-animated-galaxy/
 [31c]: src/04-shaders/31-modified-materials/
-[32c]: src/04-shaders/32-post-processing/
-[33c]: src/04-shaders/33-performance-tips/
+[32c]: src/05-extra/32-post-processing/
+[33c]: src/05-extra/33-performance-tips/
+[34c]: src/05-extra/34-intro-and-loading-progress/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -166,6 +168,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [31]: https://modified-materials-threejs-journey.vercel.app
 [32]: https://post-processing-threejs-journey.vercel.app
 [33]: https://performance-tips-threejs-journey.vercel.app
+[34]: https://intro-and-loading-progress-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 
