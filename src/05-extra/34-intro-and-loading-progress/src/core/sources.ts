@@ -1,7 +1,8 @@
 export interface Source {
 	name: string;
 	type: string;
-	path: string | string[];
+	path?: string;
+	paths?: string[];
 }
 
 const type = {
@@ -16,7 +17,7 @@ const sources: Source[] = [
 	{
 		name: "environmentMap",
 		type: type.cubeTexture,
-		path: [
+		paths: [
 			"/textures/environmentMaps/0/px.jpg",
 			"/textures/environmentMaps/0/nx.jpg",
 			"/textures/environmentMaps/0/py.jpg",

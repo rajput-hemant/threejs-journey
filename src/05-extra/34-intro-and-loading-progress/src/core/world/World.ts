@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
-import Base from "./Base";
 import Core from "../Core";
+import Base from "../meshes/Base";
 import Environment from "./Environment";
 import Resources from "../utils/Resources";
 
@@ -22,8 +22,8 @@ export default class World {
 		 * When all the Resources are loaded, we can start the experience
 		 */
 		this.resources.on("ready", () => {
-			this.base = new Base();
 			this.environment = new Environment();
+			this.base = new Base();
 		});
 	}
 

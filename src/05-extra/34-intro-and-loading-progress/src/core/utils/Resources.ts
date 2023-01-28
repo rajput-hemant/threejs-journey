@@ -1,16 +1,25 @@
 import * as THREE from "three";
+import { gsap } from "gsap";
 import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 import { Source } from "../sources";
 import EventEmitter from "./EventEmitter";
+import Overlay from "../meshes/Overlay";
 
 export default class Resources extends EventEmitter {
 	sources: Source[];
 	items: any;
 	toLoad: number;
 	loaded: number;
+	overlay?: Overlay;
 
-	loaders?: any;
+	loadingManager?: THREE.LoadingManager;
+
+	loaders?: {
+		gltfLoader: GLTFLoader;
+		textureLoader: THREE.TextureLoader;
+		cubeTextureLoader: THREE.CubeTextureLoader;
+	};
 
 	constructor(sources: Source[]) {
 		/**
@@ -23,33 +32,56 @@ export default class Resources extends EventEmitter {
 		this.items = {}; // { name: file }
 		this.toLoad = this.sources.length;
 		this.loaded = 0;
+		this.overlay = new Overlay();
 
 		this.setLoaders();
-
 		this.startLoading();
 	}
 
 	setLoaders() {
+		const loadingBaElement: HTMLElement =
+			document.querySelector(".loading-bar")!;
+		const loadingManager = new THREE.LoadingManager(
+			() => {
+				gsap.delayedCall(0.5, () => {
+					gsap.to(this.overlay!.material!.uniforms.uAlpha, {
+						duration: 3,
+						value: 0,
+						ease: "power3.inOut",
+					});
+					loadingBaElement.classList.add("ended");
+					loadingBaElement.style.transform = "";
+				});
+			},
+			(_, loaded, total) => {
+				const progress = loaded / total;
+				loadingBaElement!.style.transform = `scaleX(${progress})`;
+			}
+		);
+
 		this.loaders = {
-			gltfLoader: new GLTFLoader(),
-			textureLoader: new THREE.TextureLoader(),
-			cubeTextureLoader: new THREE.CubeTextureLoader(),
+			gltfLoader: new GLTFLoader(loadingManager),
+			textureLoader: new THREE.TextureLoader(loadingManager),
+			cubeTextureLoader: new THREE.CubeTextureLoader(loadingManager),
 		};
 	}
 
 	startLoading() {
 		for (const src of this.sources) {
 			if (src.type === "gltfModel")
-				this.loaders.gltfLoader.load(src.path, (gltf: GLTF) => {
+				this.loaders!.gltfLoader.load(src.path!, (gltf: GLTF) => {
 					this.sourceLoaded(src, gltf);
 				});
 			else if (src.type === "texture")
-				this.loaders.textureLoader.load(src.path, (texture: THREE.Texture) => {
-					this.sourceLoaded(src, texture);
-				});
+				this.loaders!.textureLoader.load(
+					src.path!,
+					(texture: THREE.Texture) => {
+						this.sourceLoaded(src, texture);
+					}
+				);
 			else if (src.type === "cubeTexture")
-				this.loaders.cubeTextureLoader.load(
-					src.path,
+				this.loaders!.cubeTextureLoader.load(
+					src.paths!,
 					(texture: THREE.CubeTexture) => {
 						this.sourceLoaded(src, texture);
 					}
@@ -57,7 +89,10 @@ export default class Resources extends EventEmitter {
 		}
 	}
 
-	sourceLoaded(source: Source, file: GLTF | THREE.Texture | THREE.CubeTexture) {
+	private sourceLoaded(
+		source: Source,
+		file: GLTF | THREE.Texture | THREE.CubeTexture
+	) {
 		this.items[source.name] = file;
 		this.loaded++;
 
