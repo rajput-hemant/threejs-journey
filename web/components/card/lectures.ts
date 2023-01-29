@@ -172,6 +172,13 @@ const lectures: Lectures = {
 			href: "https://mixing-html-and-webgl-threejs-journey.vercel.app",
 		},
 	],
+	"07": [
+		{
+			name: "First R3F Application",
+			index: "42",
+			href: "https://first-r3f-application-threejs-journey.vercel.app",
+		},
+	],
 };
 
 export default lectures;

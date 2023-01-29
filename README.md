@@ -57,10 +57,14 @@
   - [**31 - Modified Materials**][31c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][31]**
 
 - ### 05 - Extra
+
   - [**32 - Post Processing**][32c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][32]**
   - [**33 - Performance Tips**][33c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][33]**
   - [**34 - Intro & Loading Progress**][34c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][34]**
   - [**35 - Mixing HTML & WebGL**][35c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][35]**
+
+- ### 07 - React Three Fiber
+  - [**42 - First R3F Application**][42c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][42]**
 
 <div align="center">
 
@@ -136,7 +140,8 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [32c]: src/05-extra/32-post-processing/
 [33c]: src/05-extra/33-performance-tips/
 [34c]: src/05-extra/34-intro-and-loading-progress/
-[34c]: src/05-extra/35-mixing-html-and-webgl/
+[35c]: src/05-extra/35-mixing-html-and-webgl/
+[42c]: src/07-react-three-fiber/42-first-r3f-application/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -172,6 +177,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [33]: https://performance-tips-threejs-journey.vercel.app
 [34]: https://intro-and-loading-progress-threejs-journey.vercel.app
 [35]: https://mixing-html-and-webgl-threejs-journey.vercel.app
+[42]: https://first-r3f-application-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 
