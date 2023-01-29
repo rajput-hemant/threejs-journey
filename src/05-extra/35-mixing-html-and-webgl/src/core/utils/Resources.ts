@@ -21,6 +21,8 @@ export default class Resources extends EventEmitter {
 		cubeTextureLoader: THREE.CubeTextureLoader;
 	};
 
+	sceneReady = false;
+
 	constructor(sources: Source[]) {
 		/**
 		 * Call the EventEmitter constructor
@@ -52,6 +54,7 @@ export default class Resources extends EventEmitter {
 					loadingBaElement.classList.add("ended");
 					loadingBaElement.style.transform = "";
 				});
+				gsap.delayedCall(3, () => (this.sceneReady = true));
 			},
 			(_, loaded, total) => {
 				const progress = loaded / total;

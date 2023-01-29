@@ -5,6 +5,21 @@ import Core from "../Core";
 import Time from "../utils/Time";
 import Debug from "../utils/Debug";
 
+const points = [
+	{
+		position: new THREE.Vector3(1.55, 0.3, -0.6),
+		element: document.querySelector(".point-0") as HTMLElement,
+	},
+	{
+		position: new THREE.Vector3(0.5, 0.8, -1.6),
+		element: document.querySelector(".point-1") as HTMLElement,
+	},
+	{
+		position: new THREE.Vector3(1.6, -1.3, -0.7),
+		element: document.querySelector(".point-2") as HTMLElement,
+	},
+];
+
 export default class Base {
 	core: Core;
 	time?: Time;
@@ -14,11 +29,14 @@ export default class Base {
 
 	model?: GLTF;
 
+	private raycaster: THREE.Raycaster;
+
 	constructor() {
 		this.core = new Core();
 		this.time = this.core.time;
 		this.debug = this.core.debug;
 		this.scene = this.core.scene!;
+		this.raycaster = new THREE.Raycaster();
 
 		// Setup
 		this.setDebug();
@@ -53,5 +71,52 @@ export default class Base {
 
 	setDebug() {}
 
-	update() {}
+	update() {
+		if (this.core.resources!.sceneReady)
+			// Go through each point
+			points.forEach((point) => {
+				const screenPosition = point.position.clone();
+				/**
+				 * project method will take the position and project it on the screen
+				 */
+				screenPosition.project(this.core.camera!.instance!);
+
+				/**
+				 * Set the raycaster origin to the point position
+				 */
+				this.raycaster.setFromCamera(
+					screenPosition,
+					this.core.camera!.instance!
+				);
+				/**
+				 * Intersect the raycaster with the all the objects in the scene
+				 */
+				const intersects = this.raycaster.intersectObjects(
+					this.scene.children,
+					true // recursively check all the children
+				);
+
+				/**
+				 * If there is no intersection, then the point is visible
+				 * Else, the point is not visible
+				 */
+				if (intersects.length === 0) {
+					point.element.classList.add("visible");
+				} else {
+					const intersectDistance = intersects[0].distance;
+					const pointDistance = point.position.distanceTo(
+						this.core.camera!.instance!.position
+					);
+					if (intersectDistance < pointDistance) {
+						point.element.classList.remove("visible");
+					} else {
+						point.element.classList.add("visible");
+					}
+				}
+
+				const translateX = screenPosition.x * this.core.sizes!.width * 0.5;
+				const translateY = -screenPosition.y * this.core.sizes!.height * 0.5;
+				point.element.style.transform = `translate(${translateX}px, ${translateY}px)`;
+			});
+	}
 }
