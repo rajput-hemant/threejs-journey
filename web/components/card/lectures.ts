@@ -178,6 +178,11 @@ const lectures: Lectures = {
 			index: "42",
 			href: "https://first-r3f-application-threejs-journey.vercel.app",
 		},
+		{
+			name: "Drei",
+			index: "43",
+			href: "https://drei-threejs-journey.vercel.app",
+		},
 	],
 };
 

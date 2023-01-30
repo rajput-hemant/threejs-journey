@@ -65,6 +65,7 @@
 
 - ### 07 - React Three Fiber
   - [**42 - First R3F Application**][42c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][42]**
+  - [**43 - Drei**][43c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][43]**
 
 <div align="center">
 
@@ -142,6 +143,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [34c]: src/05-extra/34-intro-and-loading-progress/
 [35c]: src/05-extra/35-mixing-html-and-webgl/
 [42c]: src/07-react-three-fiber/42-first-r3f-application/
+[43c]: src/07-react-three-fiber/43-drei/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -178,6 +180,7 @@ rajput-hemant@arch:~/threejs-journey/03-basic-scene$ npm run dev
 [34]: https://intro-and-loading-progress-threejs-journey.vercel.app
 [35]: https://mixing-html-and-webgl-threejs-journey.vercel.app
 [42]: https://first-r3f-application-threejs-journey.vercel.app
+[43]: https://drei-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 
