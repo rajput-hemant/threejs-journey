@@ -183,6 +183,11 @@ const lectures: Lectures = {
 			index: "43",
 			href: "https://drei-threejs-journey.vercel.app",
 		},
+		{
+			name: "Debug",
+			index: "44",
+			href: "https://debug-threejs-journey.vercel.app",
+		},
 	],
 };
 
