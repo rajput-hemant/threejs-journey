@@ -188,6 +188,11 @@ const lectures: Lectures = {
 			index: "44",
 			href: "https://debug-threejs-journey.vercel.app",
 		},
+		{
+			name: "Environment & Staging",
+			index: "45",
+			href: "https://environment-and-staging-threejs-journey.vercel.app",
+		},
 	],
 };
 
