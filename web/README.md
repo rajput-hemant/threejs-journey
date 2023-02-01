@@ -61,6 +61,7 @@
   - [**43 - Drei**][43c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][43]**
   - [**44 - Debug**][44c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][44]**
   - [**45 - Environment & Staging**][45c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][45]**
+  - [**46 - Load Models**][46c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][46]**
 
 <div align="center">
 
@@ -143,6 +144,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [43c]: ../src/07-react-three-fiber/43-drei/
 [44c]: ../src/07-react-three-fiber/44-debug/
 [45c]: ../src/07-react-three-fiber/45-environment-and-staging/
+[46c]: ../src/07-react-three-fiber/46-load-models/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -182,6 +184,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [43]: https://drei-threejs-journey.vercel.app
 [44]: https://debug-threejs-journey.vercel.app
 [45]: https://environment-and-staging-threejs-journey.vercel.app
+[46]: https://load-models-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 

@@ -193,6 +193,11 @@ const lectures: Lectures = {
 			index: "45",
 			href: "https://environment-and-staging-threejs-journey.vercel.app",
 		},
+		{
+			name: "Load Models",
+			index: "46",
+			href: "https://load-models-threejs-journey.vercel.app",
+		},
 	],
 };
 
