@@ -203,6 +203,11 @@ const lectures: Lectures = {
 			index: "47",
 			href: "https://r3f-3d-text-threejs-journey.vercel.app",
 		},
+		{
+			name: "Mouse Events",
+			index: "49",
+			href: "https://mouse-events-threejs-journey.vercel.app",
+		},
 	],
 };
 

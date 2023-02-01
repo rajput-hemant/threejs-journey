@@ -63,6 +63,7 @@
   - [**45 - Environment & Staging**][45c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][45]**
   - [**46 - Load Models**][46c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][46]**
   - [**47 - 3D Text**][47c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][47]**
+  - [**49 - Mouse Events**][49c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][49]**
 
 <div align="center">
 
@@ -147,6 +148,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [45c]: ../src/07-react-three-fiber/45-environment-and-staging/
 [46c]: ../src/07-react-three-fiber/46-load-models/
 [47c]: ../src/07-react-three-fiber/47-3d-text/
+[49c]: ../src/07-react-three-fiber/49-mouse-events/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -188,6 +190,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [45]: https://environment-and-staging-threejs-journey.vercel.app
 [46]: https://load-models-threejs-journey.vercel.app
 [47]: https://r3f-3d-text-threejs-journey.vercel.app
+[49]: https://mouse-events-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 
