@@ -198,6 +198,11 @@ const lectures: Lectures = {
 			index: "46",
 			href: "https://load-models-threejs-journey.vercel.app",
 		},
+		{
+			name: "3D Text",
+			index: "47",
+			href: "https://r3f-3d-text-threejs-journey.vercel.app",
+		},
 	],
 };
 
