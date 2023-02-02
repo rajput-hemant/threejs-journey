@@ -208,6 +208,11 @@ const lectures: Lectures = {
 			index: "49",
 			href: "https://mouse-events-threejs-journey.vercel.app",
 		},
+		{
+			name: "Post Processing",
+			index: "50",
+			href: "https://r3f-post-processing-threejs-journey.vercel.app",
+		},
 	],
 };
 
