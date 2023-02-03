@@ -65,6 +65,7 @@
   - [**47 - 3D Text**][47c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][47]**
   - [**49 - Mouse Events**][49c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][49]**
   - [**50 - Post Processing**][50c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][50]**
+  - [**52 - Physics**][52c] &nbsp; **[<kbd>**_Live Demo_**</kbd>][52]**
 
 <div align="center">
 
@@ -151,6 +152,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [47c]: ../src/07-react-three-fiber/47-3d-text/
 [49c]: ../src/07-react-three-fiber/49-mouse-events/
 [50c]: ../src/07-react-three-fiber/50-post-processing/
+[52c]: ../src/07-react-three-fiber/52-physics/
 
 <!-----------------------------------{ demos }---------------------------------->
 
@@ -194,6 +196,7 @@ _Note: It may take up to 24h for the [contrib.rocks][contrib-rocks] plugin to up
 [47]: https://r3f-3d-text-threejs-journey.vercel.app
 [49]: https://mouse-events-threejs-journey.vercel.app
 [50]: https://r3f-post-processing-threejs-journey.vercel.app
+[52]: https://r3f-physics-threejs-journey.vercel.app
 
 <!-----------------------------------{ Links }---------------------------------->
 

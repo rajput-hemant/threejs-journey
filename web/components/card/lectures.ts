@@ -213,6 +213,11 @@ const lectures: Lectures = {
 			index: "50",
 			href: "https://r3f-post-processing-threejs-journey.vercel.app",
 		},
+		{
+			name: "Physics w/ R3F",
+			index: "52",
+			href: "https://r3f-physics-threejs-journey.vercel.app",
+		},
 	],
 };
 
