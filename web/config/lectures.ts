@@ -6,7 +6,7 @@ type Lectures = {
 	}[];
 };
 
-const lectures: Lectures = {
+export const lectures: Lectures = {
 	"01": [
 		{
 			name: "Basics",
@@ -220,5 +220,3 @@ const lectures: Lectures = {
 		},
 	],
 };
-
-export default lectures;

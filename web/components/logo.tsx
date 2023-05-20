@@ -1,6 +1,4 @@
-import React from "react";
-
-const Logo = () => {
+const Logo = ({ className }: { className?: string }) => {
 	return (
 		<svg
 			width="38"
@@ -8,6 +6,7 @@ const Logo = () => {
 			viewBox="0 0 38 43"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
+			className={className}
 		>
 			<path
 				fillRule="evenodd"

@@ -76,15 +76,15 @@
 - Fetch latest source code from master branch.
 
 ```console
-rajput-hemant@arch:~$ git clone https://github.com/rajput-hemant/threejs-journey
-rajput-hemant@arch:~$ cd threejs-journey/web
+git clone https://github.com/rajput-hemant/threejs-journey
+cd threejs-journey/web
 ```
 
 - Install dependencies and run the development server.
 
 ```console
-rajput-hemant@arch:~/threejs-journey$ npm install
-rajput-hemant@arch:~/threejs-journey$ npm run dev
+pnpm i
+pnpm dev
 ```
 
 <div align = center>

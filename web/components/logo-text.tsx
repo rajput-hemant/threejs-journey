@@ -1,6 +1,4 @@
-import React from "react";
-
-const LogoText = () => {
+const LogoText = ({ className }: { className?: string }) => {
 	return (
 		<svg
 			width="160"
@@ -8,6 +6,7 @@ const LogoText = () => {
 			viewBox="0 0 160 22"
 			fill="black"
 			xmlns="http://www.w3.org/2000/svg"
+			className={className}
 		>
 			<path
 				d="M7.52113 7.98393V5.22393H5.47413V1.93493H1.79413V5.22393H0.161133V7.98393H1.79413V13.1359C1.79413 15.7809 2.55313 17.2069 5.24413 17.2069C6.27913 17.2069 6.85413 17.0919 7.52113 16.9539V14.1939C5.95713 14.1939 5.47413 14.1939 5.47413 12.8599V7.98393H7.52113Z"
