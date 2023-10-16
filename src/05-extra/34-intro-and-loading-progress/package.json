@@ -12,7 +12,7 @@
 		"@tweakpane/core": "^1.1.2",
 		"@types/three": "^0.147.1",
 		"gsap": "^3.11.4",
-		"typescript": "^4.9.3",
+		"typescript": "^5.2.2",
 		"vite": "^4.0.0",
 		"vite-plugin-glsl": "^1.1.1"
 	},
