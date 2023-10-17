@@ -17,6 +17,6 @@
 	},
 	"dependencies": {
 		"three": "^0.157.0",
-		"tweakpane": "^3.1.10"
+		"tweakpane": "^4.0.1"
 	}
 }
