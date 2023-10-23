@@ -10,9 +10,9 @@
 	},
 	"devDependencies": {
 		"@tweakpane/core": "^1.1.9",
-		"@types/three": "^0.157.0",
+		"@types/three": "^0.157.2",
 		"typescript": "^5.2.2",
-		"vite": "^4.4.11",
+		"vite": "^4.5.0",
 		"vite-plugin-glsl": "^1.1.2"
 	},
 	"dependencies": {
