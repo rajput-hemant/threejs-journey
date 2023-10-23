@@ -9,7 +9,7 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@tweakpane/core": "^1.1.9",
+		"@tweakpane/core": "^2.0.1",
 		"@types/three": "^0.157.2",
 		"gsap": "^3.12.2",
 		"typescript": "^5.2.2",
