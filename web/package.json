@@ -10,12 +10,12 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@types/node": "20.8.9",
-		"@types/react": "18.2.33",
+		"@types/node": "20.8.10",
+		"@types/react": "18.2.35",
 		"@types/react-dom": "18.2.14",
 		"@vercel/analytics": "^1.1.1",
 		"autoprefixer": "10.4.16",
-		"eslint": "8.52.0",
+		"eslint": "8.53.0",
 		"eslint-config-next": "14.0.1",
 		"next": "14.0.1",
 		"postcss": "8.4.31",
