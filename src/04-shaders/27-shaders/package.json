@@ -9,14 +9,14 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@types/three": "^0.158.1",
-		"typescript": "^5.2.2",
+		"@types/three": "^0.159.0",
+		"typescript": "^5.3.3",
 		"vite": "^4.5.0",
-		"vite-plugin-glsl": "^1.1.2"
+		"vite-plugin-glsl": "^1.2.0"
 	},
 	"dependencies": {
-		"@types/dat.gui": "^0.7.11",
+		"@types/dat.gui": "^0.7.12",
 		"dat.gui": "^0.7.9",
-		"three": "^0.158.0"
+		"three": "^0.159.0"
 	}
 }

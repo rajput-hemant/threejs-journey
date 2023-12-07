@@ -9,11 +9,11 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@types/three": "^0.158.1",
-		"typescript": "^5.2.2",
+		"@types/three": "^0.159.0",
+		"typescript": "^5.3.3",
 		"vite": "^4.5.0"
 	},
 	"dependencies": {
-		"three": "^0.158.0"
+		"three": "^0.159.0"
 	}
 }
