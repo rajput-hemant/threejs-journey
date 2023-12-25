@@ -9,14 +9,14 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@tweakpane/core": "^2.0.2",
-		"@types/three": "^0.159.0",
+		"@tweakpane/core": "^2.0.3",
+		"@types/three": "^0.160.0",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.10",
 		"vite-plugin-glsl": "^1.2.1"
 	},
 	"dependencies": {
-		"three": "^0.159.0",
-		"tweakpane": "^4.0.2"
+		"three": "^0.160.0",
+		"tweakpane": "^4.0.3"
 	}
 }
