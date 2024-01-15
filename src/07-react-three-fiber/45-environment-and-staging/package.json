@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"@react-three/drei": "^9.93.0",
-		"@react-three/fiber": "^8.15.13",
+		"@react-three/fiber": "^8.15.14",
 		"@types/three": "^0.160.0",
 		"leva": "^0.9.35",
 		"r3f-perf": "^7.1.2",
