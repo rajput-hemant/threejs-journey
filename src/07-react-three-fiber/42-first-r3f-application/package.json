@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/fiber": "^8.15.13",
+    "@react-three/fiber": "^8.15.14",
     "@types/three": "^0.160.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
