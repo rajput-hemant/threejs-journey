@@ -11,7 +11,7 @@
 	"devDependencies": {
 		"@types/three": "^0.160.0",
 		"typescript": "^5.3.3",
-		"vite": "^5.0.11",
+		"vite": "^5.0.12",
 		"vite-plugin-glsl": "^1.2.1"
 	},
 	"dependencies": {
