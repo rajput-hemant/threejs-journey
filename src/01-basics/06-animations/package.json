@@ -10,8 +10,8 @@
 	},
 	"devDependencies": {
 		"@types/three": "^0.162.0",
-		"typescript": "^5.4.2",
-		"vite": "^5.1.6"
+		"typescript": "^5.4.3",
+		"vite": "^5.2.6"
 	},
 	"dependencies": {
 		"gsap": "^3.12.5",
