@@ -9,7 +9,7 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@types/three": "^0.163.0",
+		"@types/three": "^0.164.0",
 		"typescript": "^5.4.5",
 		"vite": "^5.2.10"
 	},
@@ -17,6 +17,6 @@
 		"@types/dat.gui": "^0.7.13",
 		"dat.gui": "^0.7.9",
 		"gsap": "^3.12.5",
-		"three": "^0.163.0"
+		"three": "^0.164.1"
 	}
 }
