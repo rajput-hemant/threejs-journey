@@ -10,8 +10,8 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@types/node": "20.12.8",
-		"@types/react": "18.3.1",
+		"@types/node": "20.12.11",
+		"@types/react": "18.3.2",
 		"@types/react-dom": "18.3.0",
 		"@vercel/analytics": "^1.2.2",
 		"autoprefixer": "10.4.19",
