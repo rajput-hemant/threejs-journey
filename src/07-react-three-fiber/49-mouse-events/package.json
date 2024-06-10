@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"@react-three/drei": "^9.106.0",
-		"@react-three/fiber": "^8.16.7",
+		"@react-three/fiber": "^8.16.8",
 		"@types/three": "^0.165.0",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
@@ -19,8 +19,8 @@
 	"devDependencies": {
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",
-		"@vitejs/plugin-react": "^4.3.0",
+		"@vitejs/plugin-react": "^4.3.1",
 		"typescript": "^5.4.5",
-		"vite": "^5.2.12"
+		"vite": "^5.2.13"
 	}
 }
