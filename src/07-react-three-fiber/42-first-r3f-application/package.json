@@ -10,16 +10,16 @@
   },
   "dependencies": {
     "@react-three/fiber": "^8.16.8",
-    "@types/three": "^0.166.0",
+    "@types/three": "^0.167.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "three": "^0.166.1"
+    "three": "^0.167.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.4"
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5"
   }
 }
