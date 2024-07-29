@@ -9,12 +9,12 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@types/three": "^0.166.0",
-		"typescript": "^5.5.3",
-		"vite": "^5.3.4"
+		"@types/three": "^0.167.1",
+		"typescript": "^5.5.4",
+		"vite": "^5.3.5"
 	},
 	"dependencies": {
 		"gsap": "^3.12.5",
-		"three": "^0.166.1"
+		"three": "^0.167.0"
 	}
 }
