@@ -9,9 +9,9 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@types/three": "^0.167.1",
+		"@types/three": "^0.167.2",
 		"typescript": "^5.5.4",
-		"vite": "^5.4.1"
+		"vite": "^5.4.2"
 	},
 	"dependencies": {
 		"@types/dat.gui": "^0.7.13",
