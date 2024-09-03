@@ -10,7 +10,7 @@
 	},
 	"devDependencies": {
 		"@tweakpane/core": "^2.0.4",
-		"@types/three": "^0.167.2",
+		"@types/three": "^0.168.0",
 		"gsap": "^3.12.5",
 		"typescript": "^5.5.4",
 		"vite": "^5.4.2",
@@ -18,7 +18,7 @@
 	},
 	"dependencies": {
 		"@tweakpane/plugin-essentials": "^0.2.1",
-		"three": "^0.167.1",
+		"three": "^0.168.0",
 		"tweakpane": "^4.0.4"
 	}
 }
