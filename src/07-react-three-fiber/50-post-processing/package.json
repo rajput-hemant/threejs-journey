@@ -9,7 +9,7 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@react-three/drei": "^9.112.0",
+		"@react-three/drei": "^9.113.0",
 		"@react-three/fiber": "^8.17.7",
 		"@react-three/postprocessing": "^2.16.2",
 		"@types/three": "^0.168.0",
@@ -21,10 +21,10 @@
 		"three": "^0.168.0"
 	},
 	"devDependencies": {
-		"@types/react": "^18.3.5",
+		"@types/react": "^18.3.8",
 		"@types/react-dom": "^18.3.0",
 		"@vitejs/plugin-react": "^4.3.1",
 		"typescript": "^5.6.2",
-		"vite": "^5.4.5"
+		"vite": "^5.4.7"
 	}
 }
