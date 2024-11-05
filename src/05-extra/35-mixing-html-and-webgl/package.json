@@ -9,7 +9,7 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@tweakpane/core": "^2.0.4",
+		"@tweakpane/core": "^2.0.5",
 		"@types/three": "^0.169.0",
 		"gsap": "^3.12.5",
 		"typescript": "^5.6.3",
@@ -18,7 +18,7 @@
 	},
 	"dependencies": {
 		"@tweakpane/plugin-essentials": "^0.2.1",
-		"three": "^0.169.0",
-		"tweakpane": "^4.0.4"
+		"three": "^0.170.0",
+		"tweakpane": "^4.0.5"
 	}
 }
