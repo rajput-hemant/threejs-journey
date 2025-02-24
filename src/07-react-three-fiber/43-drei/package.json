@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-three/drei": "^9.117.3",
-    "@react-three/fiber": "^8.17.10",
+    "@react-three/fiber": "^9.0.4",
     "@types/three": "^0.170.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
