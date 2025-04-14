@@ -13,7 +13,7 @@
 		"@types/three": "^0.175.0",
 		"gsap": "^3.12.7",
 		"typescript": "^5.8.3",
-		"vite": "^6.2.5",
+		"vite": "^6.2.6",
 		"vite-plugin-glsl": "^1.4.0"
 	},
 	"dependencies": {
