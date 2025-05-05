@@ -11,7 +11,7 @@
 	"devDependencies": {
 		"@types/three": "^0.176.0",
 		"typescript": "^5.8.3",
-		"vite": "^6.3.3"
+		"vite": "^6.3.4"
 	},
 	"dependencies": {
 		"@types/dat.gui": "^0.7.13",

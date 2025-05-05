@@ -12,11 +12,11 @@
 		"@types/dat.gui": "^0.7.13",
 		"@types/three": "^0.176.0",
 		"typescript": "^5.8.3",
-		"vite": "^6.3.3"
+		"vite": "^6.3.4"
 	},
 	"dependencies": {
 		"dat.gui": "^0.7.9",
-		"gsap": "^3.12.7",
+		"gsap": "^3.13.0",
 		"three": "^0.176.0"
 	}
 }
