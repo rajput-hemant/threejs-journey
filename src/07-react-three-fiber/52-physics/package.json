@@ -9,19 +9,19 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@react-three/drei": "^10.0.8",
+		"@react-three/drei": "^10.1.2",
 		"@react-three/fiber": "^9.1.2",
 		"@react-three/rapier": "^2.1.0",
-		"@types/three": "^0.176.0",
+		"@types/three": "^0.177.0",
 		"r3f-perf": "^7.2.3",
 		"react": "^19.1.0",
 		"react-dom": "^19.1.0",
-		"three": "^0.176.0"
+		"three": "^0.177.0"
 	},
 	"devDependencies": {
-		"@types/react": "^19.1.5",
-		"@types/react-dom": "^19.1.5",
-		"@vitejs/plugin-react": "^4.5.0",
+		"@types/react": "^19.1.6",
+		"@types/react-dom": "^19.1.6",
+		"@vitejs/plugin-react": "^4.5.1",
 		"typescript": "^5.8.3",
 		"vite": "^6.3.5"
 	}
