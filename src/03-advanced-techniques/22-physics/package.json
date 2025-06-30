@@ -11,7 +11,7 @@
 	"devDependencies": {
 		"@types/three": "^0.177.0",
 		"typescript": "^5.8.3",
-		"vite": "^6.3.5"
+		"vite": "^7.0.0"
 	},
 	"dependencies": {
 		"@types/cannon": "^0.1.13",
