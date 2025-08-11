@@ -10,18 +10,18 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@types/node": "22.16.5",
-		"@types/react": "19.1.8",
-		"@types/react-dom": "19.1.6",
+		"@types/node": "22.17.1",
+		"@types/react": "19.1.9",
+		"@types/react-dom": "19.1.7",
 		"@vercel/analytics": "^1.5.0",
 		"autoprefixer": "10.4.21",
-		"eslint": "9.31.0",
-		"eslint-config-next": "15.4.2",
-		"next": "15.4.2",
+		"eslint": "9.33.0",
+		"eslint-config-next": "15.4.6",
+		"next": "15.4.6",
 		"postcss": "8.5.6",
-		"react": "19.1.0",
-		"react-dom": "19.1.0",
+		"react": "19.1.1",
+		"react-dom": "19.1.1",
 		"tailwindcss": "3.4.17",
-		"typescript": "5.8.3"
+		"typescript": "5.9.2"
 	}
 }
