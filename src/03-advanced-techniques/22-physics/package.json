@@ -9,15 +9,15 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@types/three": "^0.179.0",
+		"@types/three": "^0.180.0",
 		"typescript": "^5.9.2",
-		"vite": "^7.1.3"
+		"vite": "^7.1.6"
 	},
 	"dependencies": {
 		"@types/cannon": "^0.1.13",
 		"@types/dat.gui": "^0.7.13",
 		"cannon": "^0.6.2",
 		"dat.gui": "^0.7.9",
-		"three": "^0.179.1"
+		"three": "^0.180.0"
 	}
 }
