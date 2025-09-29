@@ -12,8 +12,8 @@
 		"@tweakpane/core": "^2.0.5",
 		"@types/three": "^0.180.0",
 		"typescript": "^5.9.2",
-		"vite": "^7.1.6",
-		"vite-plugin-glsl": "^1.5.1"
+		"vite": "^7.1.7",
+		"vite-plugin-glsl": "^1.5.2"
 	},
 	"dependencies": {
 		"three": "^0.180.0",
