@@ -11,9 +11,9 @@
 	"devDependencies": {
 		"@tweakpane/core": "^2.0.5",
 		"@types/three": "^0.180.0",
-		"typescript": "^5.9.2",
-		"vite": "^7.1.7",
-		"vite-plugin-glsl": "^1.5.2"
+		"typescript": "^5.9.3",
+		"vite": "^7.1.9",
+		"vite-plugin-glsl": "^1.5.4"
 	},
 	"dependencies": {
 		"@tweakpane/plugin-essentials": "^0.2.1",
