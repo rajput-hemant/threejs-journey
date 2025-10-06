@@ -16,15 +16,15 @@
 		"leva": "^0.10.0",
 		"postprocessing": "^6.37.8",
 		"r3f-perf": "^7.2.3",
-		"react": "^19.1.1",
-		"react-dom": "^19.1.1",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0",
 		"three": "^0.180.0"
 	},
 	"devDependencies": {
-		"@types/react": "^19.1.15",
-		"@types/react-dom": "^19.1.9",
+		"@types/react": "^19.2.0",
+		"@types/react-dom": "^19.2.0",
 		"@vitejs/plugin-react": "^5.0.4",
-		"typescript": "^5.9.2",
-		"vite": "^7.1.7"
+		"typescript": "^5.9.3",
+		"vite": "^7.1.9"
 	}
 }
