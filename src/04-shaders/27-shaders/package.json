@@ -11,8 +11,8 @@
 	"devDependencies": {
 		"@types/three": "^0.181.0",
 		"typescript": "^5.9.3",
-		"vite": "^7.2.4",
-		"vite-plugin-glsl": "^1.5.4"
+		"vite": "^7.2.6",
+		"vite-plugin-glsl": "^1.5.5"
 	},
 	"dependencies": {
 		"@types/dat.gui": "^0.7.13",

@@ -12,7 +12,7 @@
 		"@types/dat.gui": "^0.7.13",
 		"@types/three": "^0.181.0",
 		"typescript": "^5.9.3",
-		"vite": "^7.2.4"
+		"vite": "^7.2.6"
 	},
 	"dependencies": {
 		"dat.gui": "^0.7.9",
