@@ -16,12 +16,12 @@
 		"leva": "^0.10.1",
 		"postprocessing": "^6.38.2",
 		"r3f-perf": "^7.2.3",
-		"react": "^19.2.3",
-		"react-dom": "^19.2.3",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
 		"three": "^0.182.0"
 	},
 	"devDependencies": {
-		"@types/react": "^19.2.9",
+		"@types/react": "^19.2.10",
 		"@types/react-dom": "^19.2.3",
 		"@vitejs/plugin-react": "^5.1.2",
 		"typescript": "^5.9.3",
