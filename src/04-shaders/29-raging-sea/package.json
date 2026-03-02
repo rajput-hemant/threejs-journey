@@ -16,7 +16,7 @@
 		"vite-plugin-glsl": "^1.5.5"
 	},
 	"dependencies": {
-		"three": "^0.183.1",
+		"three": "^0.183.2",
 		"tweakpane": "^4.0.5"
 	}
 }
