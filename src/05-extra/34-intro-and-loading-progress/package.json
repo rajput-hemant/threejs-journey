@@ -14,7 +14,7 @@
 		"gsap": "^3.14.2",
 		"typescript": "^5.9.3",
 		"vite": "^7.3.1",
-		"vite-plugin-glsl": "^1.5.5"
+		"vite-plugin-glsl": "^1.5.6"
 	},
 	"dependencies": {
 		"@tweakpane/plugin-essentials": "^0.2.1",
