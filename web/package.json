@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@types/node": "24.12.4",
-		"@types/react": "19.2.14",
+		"@types/react": "19.2.15",
 		"@types/react-dom": "19.2.3",
 		"@vercel/analytics": "^2.0.1",
 		"autoprefixer": "10.5.0",
