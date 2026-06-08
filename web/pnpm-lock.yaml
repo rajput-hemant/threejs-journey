@@ -6,14 +6,14 @@ settings:
 
 dependencies:
   '@types/node':
-    specifier: 24.12.4
-    version: 24.12.4
+    specifier: 24.13.1
+    version: 24.13.1
   '@types/react':
-    specifier: 19.2.16
-    version: 19.2.16
+    specifier: 19.2.17
+    version: 19.2.17
   '@types/react-dom':
     specifier: 19.2.3
-    version: 19.2.3(@types/react@19.2.16)
+    version: 19.2.3(@types/react@19.2.17)
   '@vercel/analytics':
     specifier: ^2.0.1
     version: 2.0.1(next@16.2.7)(react@19.2.7)
@@ -721,22 +721,22 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
 
-  /@types/node@24.12.4:
-    resolution: {integrity: sha512-GUUEShf+PBCGW2KaXwcIt3Yk+e3pkKwWKb9GSyM9WQVE+ep2jzmHdGsHzu4wgcZy5fN9FBdVzjpBQsYlpfpgLA==}
+  /@types/node@24.13.1:
+    resolution: {integrity: sha512-RSpUJGmvsJ1ZeBehQZFhIdpsz+bIpES0nIQXko4Ybq+N+kX6XvOq3Jo+iJ82FWLdblFq85AsMikd3m35jgezYg==}
     dependencies:
-      undici-types: 7.16.0
+      undici-types: 7.18.2
     dev: false
 
-  /@types/react-dom@19.2.3(@types/react@19.2.16):
+  /@types/react-dom@19.2.3(@types/react@19.2.17):
     resolution: {integrity: sha512-jp2L/eY6fn+KgVVQAOqYItbF0VY/YApe5Mz2F0aykSO8gx31bYCZyvSeYxCHKvzHG5eZjc+zyaS5BrBWya2+kQ==}
     peerDependencies:
       '@types/react': ^19.2.0
     dependencies:
-      '@types/react': 19.2.16
+      '@types/react': 19.2.17
     dev: false
 
-  /@types/react@19.2.16:
-    resolution: {integrity: sha512-esJiCAnl0kfpNdE69f3So4WJUXy95dLZydX0KwK46riIHDzHM7O9Vtf9xCHW0PXIqvgqNrswl522kA/5yx+F4w==}
+  /@types/react@19.2.17:
+    resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
     dependencies:
       csstype: 3.2.3
     dev: false
@@ -3627,8 +3627,8 @@ packages:
       which-boxed-primitive: 1.1.1
     dev: false
 
-  /undici-types@7.16.0:
-    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
+  /undici-types@7.18.2:
+    resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
     dev: false
 
   /untildify@4.0.0:
