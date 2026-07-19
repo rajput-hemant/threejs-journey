@@ -12,19 +12,19 @@
 		"@react-three/drei": "^10.7.7",
 		"@react-three/fiber": "^9.6.1",
 		"@react-three/postprocessing": "^3.0.4",
-		"@types/three": "^0.184.1",
+		"@types/three": "^0.185.1",
 		"leva": "^0.10.1",
-		"postprocessing": "^6.39.1",
+		"postprocessing": "^6.39.3",
 		"r3f-perf": "^7.2.3",
 		"react": "^19.2.7",
 		"react-dom": "^19.2.7",
-		"three": "^0.184.0"
+		"three": "^0.185.1"
 	},
 	"devDependencies": {
 		"@types/react": "^19.2.17",
 		"@types/react-dom": "^19.2.3",
-		"@vitejs/plugin-react": "^6.0.2",
+		"@vitejs/plugin-react": "^6.0.3",
 		"typescript": "^6.0.3",
-		"vite": "^8.0.16"
+		"vite": "^8.1.5"
 	}
 }
