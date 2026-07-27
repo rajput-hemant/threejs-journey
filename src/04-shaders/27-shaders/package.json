@@ -12,7 +12,7 @@
 		"@types/three": "^0.185.1",
 		"typescript": "^6.0.3",
 		"vite": "^8.1.5",
-		"vite-plugin-glsl": "^1.6.0"
+		"vite-plugin-glsl": "^1.6.1"
 	},
 	"dependencies": {
 		"@types/dat.gui": "^0.7.13",
