@@ -12,11 +12,11 @@
 		"@tweakpane/core": "^2.0.5",
 		"@types/three": "^0.186.0",
 		"typescript": "^6.0.3",
-		"vite": "^8.3.0",
-		"vite-plugin-glsl": "^1.6.1"
+		"vite": "^8.3.2",
+		"vite-plugin-glsl": "^1.6.2"
 	},
 	"dependencies": {
-		"three": "^0.186.0",
+		"three": "^0.186.1",
 		"tweakpane": "^4.0.5"
 	}
 }
