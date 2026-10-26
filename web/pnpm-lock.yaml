@@ -24,8 +24,8 @@ dependencies:
     specifier: 10.13.0
     version: 10.13.0
   eslint-config-next:
-    specifier: 16.4.2
-    version: 16.4.2(@typescript-eslint/parser@8.71.1)(eslint@10.13.0)(typescript@6.0.3)
+    specifier: 16.4.3
+    version: 16.4.3(@typescript-eslint/parser@8.71.1)(eslint@10.13.0)(typescript@6.0.3)
   next:
     specifier: 16.2.12
     version: 16.2.12(@babel/core@7.28.5)(react-dom@19.3.1)(react@19.3.1)
@@ -608,8 +608,8 @@ packages:
     resolution: {integrity: sha512-d0Z5Bc13Fa4nR8pFAKx2jay2yhJM16vlfHbTzYnUQAxlNb6B6lmn4hjt69lYNt4kRtyYP6gEM49lPRHNbIyneg==}
     dev: false
 
-  /@next/eslint-plugin-next@16.4.2(eslint@10.13.0):
-    resolution: {integrity: sha512-gCTWlw0e+Y6kajpFyKKgA195jUJCRhlzJE0lV7ufe8a+ghIsANWZ0/FiJwg6DuOG1+OvRbcZDcFBoRh3mNJx0g==}
+  /@next/eslint-plugin-next@16.4.3(eslint@10.13.0):
+    resolution: {integrity: sha512-oxuC06wt/71h6ACYCV9GbKOfnf5a7VlRe/p80YHTut15TNgDEmynDnaq8t/xhy5rlvk7dhItIPs6H3rvIM4kyw==}
     dependencies:
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.13.0)
       fast-glob: 3.3.1
@@ -1631,8 +1631,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /eslint-config-next@16.4.2(@typescript-eslint/parser@8.71.1)(eslint@10.13.0)(typescript@6.0.3):
-    resolution: {integrity: sha512-P33vjcETMXc+qBjpF77TeJHZLzk6cPcTy8KjpxLucYB3mCIFIORMcZ+cBXcAiIYjE5RM7jyknEEOwMNdnx/ADQ==}
+  /eslint-config-next@16.4.3(@typescript-eslint/parser@8.71.1)(eslint@10.13.0)(typescript@6.0.3):
+    resolution: {integrity: sha512-j9IqBma6abp800frdUURaizYMgXOK+jNGyq6CsYcM9AxpSJs5D/TgMNGeAmRUilZvA7g9V1Tr71gNg9/SVTuMQ==}
     peerDependencies:
       eslint: '>=9.0.0'
       typescript: '>=3.3.1'
@@ -1640,7 +1640,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 16.4.2(eslint@10.13.0)
+      '@next/eslint-plugin-next': 16.4.3(eslint@10.13.0)
       eslint: 10.13.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@8.71.1)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.32.0)(eslint@10.13.0)
