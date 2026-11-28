@@ -13,8 +13,8 @@
 		"@types/three": "^0.187.0",
 		"gsap": "^3.15.1",
 		"typescript": "^6.0.3",
-		"vite": "^8.3.6",
-		"vite-plugin-glsl": "^1.6.2"
+		"vite": "^8.4.0",
+		"vite-plugin-glsl": "^1.6.4"
 	},
 	"dependencies": {
 		"@tweakpane/plugin-essentials": "^0.2.1",
